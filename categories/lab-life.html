@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연구소 안 이야기 | 연구소 밖 이야기</title>
+<meta name="description" content="연구소 밖 이야기 — 연구소 안 이야기 카테고리의 글 목록입니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --border: #d2d2d7;
+  --accent: #0668b3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000; --text: #f5f5f7; --muted: #86868b; --border: #3a3a3c;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000; --text: #f5f5f7; --muted: #86868b; --border: #3a3a3c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px;
+}
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+.back-nav { padding: 24px 0 0; font-size: 14px; }
+.back-nav a { color: var(--muted); text-decoration: none; }
+.back-nav a:hover { color: var(--accent); }
+
+.cat-header { padding: 40px 0 48px; text-align: center; }
+.cat-icon { font-size: 34px; margin-bottom: 14px; }
+.cat-title { font-size: clamp(26px,4vw,36px); font-weight: 700; letter-spacing: -0.015em; margin-bottom: 12px; word-break: keep-all; }
+.cat-desc { font-size: 15px; color: var(--muted); word-break: keep-all; }
+
+.row-list { border-top: 1px solid var(--border); padding-bottom: 80px; }
+.row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 26px 0; border-bottom: 1px solid var(--border);
+  text-decoration: none; color: inherit;
+}
+.row .r-body { flex: 1; }
+.row .r-name { font-size: 17px; font-weight: 600; margin-bottom: 6px; word-break: keep-all; }
+.row .r-desc { font-size: 14px; color: var(--muted); word-break: keep-all; margin-bottom: 8px; }
+.row .r-meta { font-size: 12px; color: var(--muted); }
+.row .r-arrow { font-size: 18px; color: var(--muted); flex-shrink: 0; transition: transform .15s ease; }
+.row:hover .r-arrow { transform: translateX(3px); color: var(--accent); }
+
+.empty { padding: 48px 0; text-align: center; color: var(--muted); font-size: 15px; word-break: keep-all; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="back-nav"><a href="/">← 홈으로</a></div>
+  <div class="cat-header">
+    <div class="cat-icon">🔬</div>
+    <div class="cat-title">연구소 안 이야기</div>
+    <div class="cat-desc">연구실 문화와 학위 과정에 대한 담백한 기록</div>
+  </div>
+  <div class="row-list">
+    <a href="/posts/lab-culture-essay.html" class="row">
+      <span class="r-body">
+        <span class="r-name">연구실에서는 몰랐던 것들 — 대학원과 회사, 문화가 다른 이유</span>
+        <span class="r-desc">대학원 연구실 문화와 기업 조직 문화의 차이를 정리하며, 학계에서 산업계로 옮길 때 미리 알아두면 좋은 감각의 차이를 이야기합니다.</span>
+        <span class="r-meta">2026.09.10 · Ironbee</span>
+      </span>
+      <span class="r-arrow">›</span>
+    </a>
+  </div>
+</div>
+</body>
+</html>
