@@ -304,6 +304,32 @@ p { margin-bottom: 20px; word-break: keep-all; }
   body { font-size: 16px; }
 }
 
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+.img-block {
+  margin: 32px 0 10px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  background: var(--card-bg);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 20px;
+}
+figure { margin: 0 0 30px; }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
 .back-nav {
   max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
   font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
@@ -324,6 +350,48 @@ p { margin-bottom: 20px; word-break: keep-all; }
   <p>박사 학위를 마치고 산업계 이직을 준비하다 보면, 가장 먼저 막히는 지점이 경력기술서입니다. 논문 몇 편, 학회 발표, 연구 프로젝트 경험은 있는데 이것을 채용 담당자가 이해할 수 있는 형태로 어떻게 옮겨야 할지 막막한 경우가 많습니다.</p>
 
   <p>기업의 채용 담당자는 대부분 학술 논문의 구조나 평가 기준에 익숙하지 않습니다. <span class="highlight">연구 실적을 그대로 나열하기보다, 그 안에 담긴 역량을 기업이 필요로 하는 언어로 재구성하는 것</span>이 핵심입니다.</p>
+  <figure>
+    <div class="img-illustration"><svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--accent-light)"/>
+        <stop offset="100%" stop-color="var(--card-bg)"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#bgGrad)"/>
+    <!-- 왼쪽: 학위증 -->
+    <g transform="translate(120,110)">
+      <rect x="0" y="0" width="150" height="180" rx="8" fill="var(--card-bg)" stroke="var(--border)" stroke-width="2"/>
+      <circle cx="75" cy="46" r="26" fill="none" stroke="var(--accent)" stroke-width="3"/>
+      <path d="M60 46 L72 58 L92 34" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="20" y="92" width="110" height="8" rx="4" fill="var(--border)"/>
+      <rect x="20" y="112" width="90" height="8" rx="4" fill="var(--border)"/>
+      <rect x="20" y="132" width="100" height="8" rx="4" fill="var(--border)"/>
+      <rect x="20" y="152" width="70" height="8" rx="4" fill="var(--border)"/>
+    </g>
+    <!-- 화살표 -->
+    <g transform="translate(300,190)">
+      <line x1="0" y1="10" x2="90" y2="10" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M78 -4 L96 10 L78 24" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- 오른쪽: 경력기술서 -->
+    <g transform="translate(430,90)">
+      <rect x="0" y="0" width="150" height="200" rx="8" fill="var(--card-bg)" stroke="var(--accent)" stroke-width="2.5"/>
+      <rect x="20" y="24" width="80" height="12" rx="6" fill="var(--accent)"/>
+      <rect x="20" y="52" width="110" height="7" rx="3.5" fill="var(--border)"/>
+      <rect x="20" y="68" width="90" height="7" rx="3.5" fill="var(--border)"/>
+      <circle cx="27" cy="100" r="5" fill="var(--green)"/>
+      <rect x="42" y="96" width="88" height="7" rx="3.5" fill="var(--border)"/>
+      <circle cx="27" cy="122" r="5" fill="var(--green)"/>
+      <rect x="42" y="118" width="88" height="7" rx="3.5" fill="var(--border)"/>
+      <circle cx="27" cy="144" r="5" fill="var(--green)"/>
+      <rect x="42" y="140" width="70" height="7" rx="3.5" fill="var(--border)"/>
+      <rect x="20" y="168" width="60" height="16" rx="8" fill="var(--accent-light)"/>
+    </g>
+  </svg></div>
+    <figcaption>노트북 화면에 이력서와 논문 목록을 나란히 띄워놓고 경력기술서를 다듬는 모습. 연구 실적을 기업이 이해하는 언어로 번역하는 과정을 상징적으로 보여준다.</figcaption>
+  </figure>
+
 
   <h2>학술 이력서와 기업 경력기술서, 무엇이 다른가</h2>
 
@@ -434,7 +502,7 @@ p { margin-bottom: 20px; word-break: keep-all; }
     <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
     <h3>사회과학 박사, 데이터 분석 직무로 이직을 준비하는 경우</h3>
     <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 박사 과정 동안 대규모 설문 데이터를 다룬 경험이 있지만, 경력기술서에는 "설문조사를 실시하고 논문을 작성함"이라고만 적어 서류에서 계속 탈락했다고 가정해 보겠습니다.</p>
-    <p>이 경우 가장 먼저 손볼 부분은 정량적 정보의 누락입니다. 응답자 수, 사용한 통계 기법, 분석 결과가 실제로 어떤 의사결정에 반영됐는지가 빠져 있으면 채용 담당자는 역량의 규모를 가늠하기 어렵습니다.</p>
+    <p>이 경우 가장 먼저 손볼 부분은 정량적 정보의 누락입니다. 응답자 수, 사용한 통계 기법, 분석 결과가 실제로 어떤 의사결결정에 반영됐는지가 빠져 있으면 채용 담당자는 역량의 규모를 가늠하기 어렵습니다.</p>
     <p>"응답자 1,200명 규모의 설문 데이터를 R로 분석해 3개 핵심 변수 간 인과관계를 검증하고, 논문 심사를 거쳐 학술지에 게재함"처럼 <span class="highlight">숫자와 도구, 결과를 함께 제시</span>하는 방식으로 바꾸면 채용 담당자가 역량의 크기를 구체적으로 이해할 수 있습니다.</p>
   </div>
 
