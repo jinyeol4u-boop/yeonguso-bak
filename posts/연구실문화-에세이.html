@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연구실에서는 몰랐던 것들 | 연구소 밖 이야기</title>
+<meta name="description" content="대학원 연구실 문화와 기업 조직 문화의 차이를 정리하며, 학계에서 산업계로 옮길 때 미리 알아두면 좋은 감각의 차이를 이야기합니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5;
+  --text: #2c2c2c;
+  --accent: #1a5276;
+  --accent-light: #e8f4fd;
+  --muted: #727272;
+  --border: #e8e0d5;
+  --card-bg: #ffffff;
+  --green: #1e8449;
+  --green-light: #e8f5ee;
+  --orange: #d35400;
+  --orange-light: #fef3e2;
+  --purple: #6e2f8a;
+  --purple-light: #f4eefa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+.summary-card {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 24px 28px;
+  margin: 40px 0;
+}
+.summary-card .label {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  letter-spacing: 1px; margin-bottom: 10px;
+}
+.summary-card p {
+  font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px; font-weight: 700;
+  margin: 50px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+  color: var(--text);
+}
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 20px;
+  background: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px; font-weight: 600;
+  margin: 32px 0 14px;
+  color: var(--text);
+}
+
+p { margin-bottom: 20px; word-break: keep-all; }
+
+.highlight {
+  background: none;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.compare-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.compare-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2;
+}
+.compare-item .ci-list li { padding: 0; }
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.item-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name {
+  font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text);
+}
+.item-card .ic-meta {
+  font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px;
+}
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point {
+  margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500;
+}
+.item-card.highlight-card {
+  border: 2px solid var(--accent);
+  background: var(--accent-light);
+}
+.item-card.highlight-card .ic-name { color: var(--accent); }
+
+.example-card {
+  background: var(--orange-light);
+  border: 1px solid #f0c080;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.example-card .ec-label {
+  font-size: 12px; font-weight: 600; color: var(--orange);
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+
+.checklist {
+  background: var(--green-light);
+  border: 1px solid #a8d5b8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.checklist .cl-label {
+  font-size: 12px; font-weight: 600; color: var(--green);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.cl-item {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #1a5c35;
+  line-height: 1.7;
+}
+.cl-item:last-child { margin-bottom: 0; }
+
+.conclusion-box {
+  background: linear-gradient(135deg, #0d1a2d, #1a3050);
+  color: white;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 50px 0;
+}
+.conclusion-box h3 {
+  font-family: 'Noto Serif KR', serif;
+  color: #aed6f1;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.conclusion-box p {
+  color: rgba(255,255,255,0.87);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.conclusion-box p:last-child { margin-bottom: 0; }
+
+.disclaimer {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; }
+  .item-grid { grid-template-columns: 1fr; }
+  h2 { font-size: 19px; }
+  body { font-size: 16px; }
+}
+
+.back-nav {
+  max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+}
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+</style>
+</head>
+<body>
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>대학원 연구실과 기업 조직은 일하는 방식의 기본 전제 자체가 다릅니다. 이 차이를 미리 알고 있으면 산업계로 옮길 때 겪는 혼란을 조금 줄일 수 있습니다.</p>
+  </div>
+
+  <p>연구실 생활을 오래 한 사람들에게는 익숙한 리듬이 있습니다. 정해진 출퇴근 시간보다 실험이나 논문 마감이 하루의 흐름을 결정하고, 성과는 몇 달, 길게는 몇 년 단위로 평가받습니다. 이런 리듬에 익숙해진 채로 회사에 들어가면, 처음 몇 달은 낯선 감각의 연속입니다.</p>
+
+  <p>이 글은 <span class="highlight">연구실 문화와 기업 문화가 어디에서, 왜 다른지</span>를 담백하게 정리해보는 글입니다. 어느 쪽이 더 낫다는 이야기가 아니라, 옮겨가기 전에 알아두면 마음의 준비를 할 수 있는 차이들입니다.</p>
+
+  <h2>시간의 단위가 다릅니다</h2>
+
+  <div class="compare-box">
+    <div class="compare-item basic">
+      <div class="ci-label">연구실의 시간</div>
+      <ul class="ci-list">
+        <li>성과 평가 주기: 학기 또는 연 단위</li>
+        <li>논문 게재까지 수개월~수년</li>
+        <li>하루의 흐름은 실험·집필 중심</li>
+        <li>결과보다 과정의 논리가 중요</li>
+      </ul>
+    </div>
+    <div class="compare-item extra">
+      <div class="ci-label">회사의 시간</div>
+      <ul class="ci-list">
+        <li>성과 평가 주기: 분기 또는 월 단위</li>
+        <li>프로젝트 완료까지 수주~수개월</li>
+        <li>하루의 흐름은 회의·보고 중심</li>
+        <li>과정보다 결과의 속도가 중요</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>연구실에서는 하나의 질문을 오래 붙들고 있는 것이 미덕일 때가 많습니다. 반면 회사에서는 같은 시간 동안 여러 개의 작은 결정을 내리고, 그 결정들이 쌓여 성과가 됩니다. 이 속도 차이에 적응하는 데는 생각보다 시간이 걸립니다.</p>
+
+  <h2>연구실과 회사, 감각이 다른 지점들</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">🗣️</div>
+      <div class="ic-name">보고의 형식</div>
+      <div class="ic-meta">논문 vs 보고서</div>
+      <div class="ic-desc">논문은 논증의 완결성을, 회사 보고서는 의사결정에 필요한 핵심만 빠르게 전달하는 것을 우선합니다.</div>
+      <div class="ic-point">결론을 먼저 말하는 습관이 필요</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🤝</div>
+      <div class="ic-name">협업의 방식</div>
+      <div class="ic-meta">공동연구 vs 팀 프로젝트</div>
+      <div class="ic-desc">공동연구는 역할이 비교적 독립적이지만, 회사의 팀 프로젝트는 실시간 조율과 잦은 커뮤니케이션이 필요합니다.</div>
+      <div class="ic-point">잦은 회의에 대한 심리적 적응 필요</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📈</div>
+      <div class="ic-name">평가의 기준</div>
+      <div class="ic-meta">독창성 vs 재현성</div>
+      <div class="ic-desc">연구실은 새로운 발견을, 회사는 안정적으로 반복 가능한 성과를 더 높이 평가하는 경향이 있습니다.</div>
+      <div class="ic-point">완벽함보다 완료가 중요해짐</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🧭</div>
+      <div class="ic-name">자율성의 범위</div>
+      <div class="ic-meta">주제 설정 vs 목표 배분</div>
+      <div class="ic-desc">연구 주제는 스스로 정할 수 있었지만, 회사에서는 조직의 목표 안에서 역할이 정해집니다.</div>
+      <div class="ic-point">방향보다 실행력이 평가받음</div>
+    </div>
+  </div>
+
+  <h2>실제 상황에 적용해보면</h2>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>박사 학위 취득 후 첫 회사 생활을 시작한 경우</h3>
+    <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 학위 과정 동안 하나의 연구 질문을 몇 년에 걸쳐 파고든 사람이, 회사에 입사해 첫 주부터 매일 상태를 공유하는 회의에 참석한다고 가정해 보겠습니다.</p>
+    <p>이런 경우 "아직 결론이 나지 않았는데 오늘 상태를 어떻게 보고해야 하나"라는 고민에 부딪히기 쉽습니다. 연구실에서는 결론이 나기 전까지 말을 아끼는 것이 자연스러웠지만, 회사에서는 <span class="highlight">진행 중인 상태 자체를 공유하는 것</span>이 협업의 기본이기 때문입니다.</p>
+    <p>이 차이를 미리 알고 있으면, "완성된 결과만 보고해야 한다"는 습관을 조금 더 빨리 내려놓을 수 있습니다.</p>
+  </div>
+
+  <h2>옮겨가기 전에 마음에 담아두면 좋은 것</h2>
+
+  <div class="checklist">
+    <div class="cl-label">적응을 돕는 마음가짐</div>
+    <div class="cl-item"><strong>완결보다 진행 공유</strong> — 미완성 상태를 공유하는 것도 협업의 일부라는 점을 받아들이기</div>
+    <div class="cl-item"><strong>결론 먼저 말하기</strong> — 논증의 순서보다 핵심 결론을 앞세우는 화법 연습하기</div>
+    <div class="cl-item"><strong>속도에 대한 감각 재조정</strong> — 완벽한 결과보다 적정 시점의 완료를 우선하는 감각 익히기</div>
+    <div class="cl-item"><strong>자율성의 범위 이해</strong> — 방향 설정보다 주어진 목표 안에서의 실행력이 평가받는다는 점 인지하기</div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 다르다는 것이지 틀렸다는 것이 아닙니다</h3>
+  <p>연구실의 방식이 비효율적인 것도, 회사의 방식이 얕은 것도 아닙니다. 각자의 목적에 맞게 최적화된 문화일 뿐입니다.</p>
+
+  <h3>두 번째, 적응에는 시간이 걸립니다</h3>
+  <p>수년간 익힌 리듬을 몇 주 만에 바꾸기는 어렵습니다. 스스로에게 적응할 시간을 충분히 주는 것이 필요합니다.</p>
+
+  <h3>세 번째, 연구자의 강점은 사라지지 않습니다</h3>
+  <p>깊이 파고드는 힘과 논리적으로 구조화하는 능력은 회사에서도 여전히 희소하고 귀한 역량입니다.</p>
+
+  <div class="conclusion-box">
+    <h3>속도는 다르지만, 방향을 잃을 필요는 없습니다</h3>
+    <p>연구실에서 익힌 태도와 회사에서 필요한 태도는 다르지만, 그 차이를 미리 알고 있는 것만으로도 적응의 속도는 달라집니다.</p>
+    <p>지금 연구실을 떠날 준비를 하고 있다면, 오늘 정리한 네 가지 차이 중 스스로에게 가장 낯설게 느껴지는 것부터 천천히 마음에 담아보시길 권합니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글은 연구실 문화와 기업 문화의 일반적인 경향을 정리한 에세이 성격의 글입니다. 실제 경험은 소속 기관과 조직문화에 따라 다를 수 있습니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#연구실문화</span>
+    <span class="tag">#대학원생활</span>
+    <span class="tag">#박사학위이후</span>
+    <span class="tag">#학계산업계</span>
+    <span class="tag">#커리어전환에세이</span>
+    <span class="tag">#연구자이야기</span>
+    <span class="tag">#회사적응기</span>
+    <span class="tag">#포닥진로고민</span>
+  </div>
+
+</div>
+</body>
+</html>
