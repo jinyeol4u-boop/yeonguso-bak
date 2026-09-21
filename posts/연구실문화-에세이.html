@@ -233,6 +233,32 @@ p { margin-bottom: 20px; word-break: keep-all; }
   body { font-size: 16px; }
 }
 
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+.img-block {
+  margin: 32px 0 10px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  background: var(--card-bg);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 20px;
+}
+figure { margin: 0 0 30px; }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
 .back-nav {
   max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
   font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
@@ -253,6 +279,41 @@ p { margin-bottom: 20px; word-break: keep-all; }
   <p>연구실 생활을 오래 한 사람들에게는 익숙한 리듬이 있습니다. 정해진 출퇴근 시간보다 실험이나 논문 마감이 하루의 흐름을 결정하고, 성과는 몇 달, 길게는 몇 년 단위로 평가받습니다. 이런 리듬에 익숙해진 채로 회사에 들어가면, 처음 몇 달은 낯선 감각의 연속입니다.</p>
 
   <p>이 글은 <span class="highlight">연구실 문화와 기업 문화가 어디에서, 왜 다른지</span>를 담백하게 정리해보는 글입니다. 어느 쪽이 더 낫다는 이야기가 아니라, 옮겨가기 전에 알아두면 마음의 준비를 할 수 있는 차이들입니다.</p>
+  <figure>
+    <div class="img-illustration"><svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--accent-light)"/>
+        <stop offset="100%" stop-color="var(--card-bg)"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#bgGrad)"/>
+    <line x1="350" y1="60" x2="350" y2="334" stroke="var(--border)" stroke-width="2" stroke-dasharray="6 8"/>
+    <!-- 왼쪽: 연구실 (플라스크) -->
+    <g transform="translate(115,120)">
+      <rect x="-40" y="150" width="200" height="10" rx="5" fill="var(--border)"/>
+      <path d="M60 0 H100 V60 L145 160 Q150 175 130 175 H30 Q10 175 15 160 L60 60 Z"
+            fill="var(--accent-light)" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
+      <rect x="55" y="-14" width="50" height="16" rx="4" fill="var(--accent)"/>
+      <path d="M35 120 Q80 105 125 120 L130 145 Q80 158 30 145 Z" fill="var(--accent)" opacity="0.35"/>
+      <circle cx="70" cy="100" r="5" fill="var(--accent)"/>
+      <circle cx="95" cy="118" r="4" fill="var(--accent)"/>
+      <circle cx="55" cy="130" r="3" fill="var(--accent)"/>
+    </g>
+    <!-- 오른쪽: 회사 (책상+모니터) -->
+    <g transform="translate(430,140)">
+      <rect x="-20" y="120" width="200" height="12" rx="6" fill="var(--border)"/>
+      <rect x="10" y="40" width="140" height="90" rx="8" fill="var(--card-bg)" stroke="var(--border)" stroke-width="2"/>
+      <rect x="24" y="52" width="112" height="64" rx="4" fill="var(--accent-light)"/>
+      <rect x="60" y="130" width="40" height="14" fill="var(--border)"/>
+      <rect x="-10" y="150" width="180" height="14" rx="4" fill="var(--card-bg)" stroke="var(--border)" stroke-width="2"/>
+      <rect x="10" y="170" width="30" height="8" rx="4" fill="var(--green)"/>
+      <rect x="50" y="170" width="50" height="8" rx="4" fill="var(--border)"/>
+    </g>
+  </svg></div>
+    <figcaption>연구실 책상과 회사 사무실 책상을 나란히 비교한 이미지. 연구실과 기업, 두 공간이 지닌 리듬과 문화의 차이를 시각적으로 보여준다.</figcaption>
+  </figure>
+
 
   <h2>시간의 단위가 다릅니다</h2>
 
