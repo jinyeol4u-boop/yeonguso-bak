@@ -1,0 +1,585 @@
+<!-- 추천 제목: 박사 자기소개서, 학계 지원서와 뭐가 다른가 -->
+<!-- 대표 이미지 삽입 위치: 16:9 이미지 권장 (SVG 일러스트로 대체) -->
+<meta name="description" content="학계 지원서(SOP)와 기업 자기소개서는 목적과 문체, 강조점이 완전히 다릅니다. 박사 학위자가 기업에 지원할 때 자주 하는 실수와 항목별 작성 기준을 정리했습니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5;
+  --text: #2c2c2c;
+  --accent: #1a5276;
+  --accent-light: #e8f4fd;
+  --muted: #727272;
+  --border: #e8e0d5;
+  --card-bg: #ffffff;
+  --green: #1e8449;
+  --green-light: #e8f5ee;
+  --orange: #d35400;
+  --orange-light: #fef3e2;
+  --purple: #6e2f8a;
+  --purple-light: #f4eefa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+.summary-card {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 24px 28px;
+  margin: 40px 0;
+}
+.summary-card .label {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  letter-spacing: 1px; margin-bottom: 10px;
+}
+.summary-card p {
+  font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px; font-weight: 700;
+  margin: 50px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+  color: var(--text);
+}
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 20px;
+  background: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px; font-weight: 600;
+  margin: 32px 0 14px;
+  color: var(--text);
+}
+
+p { margin-bottom: 20px; word-break: keep-all; }
+
+.highlight {
+  background: none;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+figure { margin: 0 0 30px; }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.compare-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.compare-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2;
+}
+.compare-item .ci-list li { padding: 0; }
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.item-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name {
+  font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text);
+}
+.item-card .ic-meta {
+  font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px;
+}
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point {
+  margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500;
+}
+.item-card.highlight-card {
+  border: 2px solid var(--accent);
+  background: var(--accent-light);
+}
+.item-card.highlight-card .ic-name { color: var(--accent); }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 15px;
+}
+.data-table th {
+  background: var(--accent);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.data-table tr:nth-child(even) td { background: #f8f8f8; }
+
+.point-badge {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.example-card {
+  background: var(--orange-light);
+  border: 1px solid #f0c080;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.example-card .ec-label {
+  font-size: 12px; font-weight: 600; color: var(--orange);
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+
+.checklist {
+  background: var(--green-light);
+  border: 1px solid #a8d5b8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.checklist .cl-label {
+  font-size: 12px; font-weight: 600; color: var(--green);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.cl-item {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #1a5c35;
+  line-height: 1.7;
+}
+.cl-item:last-child { margin-bottom: 0; }
+
+.how-box {
+  background: var(--purple-light);
+  border: 1px solid #d4a8e8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.how-box .hb-label {
+  font-size: 12px; font-weight: 600; color: var(--purple);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.how-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.how-item:last-child { margin-bottom: 0; }
+.how-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.how-text { font-size: 15px; color: #3a1a5a; line-height: 1.75; }
+.how-text strong { color: var(--purple); }
+
+.conclusion-box {
+  background: linear-gradient(135deg, #0d1a2d, #1a3050);
+  color: white;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 50px 0;
+}
+.conclusion-box h3 {
+  font-family: 'Noto Serif KR', serif;
+  color: #aed6f1;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.conclusion-box p {
+  color: rgba(255,255,255,0.87);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.conclusion-box p:last-child { margin-bottom: 0; }
+
+.disclaimer {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.back-nav {
+  max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+}
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; }
+  .item-grid { grid-template-columns: 1fr; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .data-table td, .data-table th { padding: 10px; font-size: 13px; }
+  h2 { font-size: 19px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>학계 지원서(SOP, 연구계획서)와 기업 자기소개서는 목적과 문체가 전혀 다른 문서입니다. 박사 학위자가 기업 지원 시 자주 저지르는 실수와, 항목별로 무엇을 채워야 하는지 정리했습니다.</p>
+  </div>
+
+  <p>제가 논문·커리어 상담을 하면서 자기소개서 초안을 검토해드리면, 유독 박사 학위자분들의 글에서 반복적으로 보이는 패턴이 있습니다. 문장은 정교한데, 정작 "이 사람을 왜 뽑아야 하는가"에 대한 답이 잘 안 보이는 경우입니다. 학계 지원서에 익숙한 문체가 기업 자기소개서에서는 오히려 감점 요인이 되기도 합니다.</p>
+
+  <p>이 글에서는 <span class="highlight">학계 지원서(Statement of Purpose)와 기업 자기소개서가 목적상 어떻게 다른지</span>, 그리고 실제로 기업 자소서 항목을 채울 때 어떤 기준으로 써야 하는지를 정리합니다. 상담 과정에서 반복적으로 다듬어드렸던 실제 패턴을 바탕으로 구성했습니다.</p>
+
+  <p>특히 처음 산업계 지원서를 써보는 분들은, 자신이 학계식으로 쓰고 있다는 사실조차 눈치채지 못하는 경우가 많습니다. 글 자체는 논리적이고 문장력도 좋은데, 채용 담당자 입장에서는 "그래서 결론이 뭔가요"라는 질문이 남는 식입니다. 아래 내용을 하나씩 따라가시면서, 지금 쓰고 계신 초안이 어느 쪽에 더 가까운지 점검해보시길 권합니다.</p>
+
+  <figure>
+    <div class="img-illustration">
+      <svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bgGrad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--accent-light)"/>
+            <stop offset="100%" stop-color="var(--card-bg)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#bgGrad3)"/>
+        <!-- 왼쪽: 학계 지원서 -->
+        <g transform="translate(90,90)">
+          <rect x="0" y="0" width="200" height="220" rx="10" fill="var(--card-bg)" stroke="var(--border)" stroke-width="2"/>
+          <circle cx="34" cy="34" r="16" fill="none" stroke="var(--muted)" stroke-width="2.5"/>
+          <path d="M26 34 h16 M34 26 v16" stroke="var(--muted)" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="24" y="66" width="152" height="8" rx="4" fill="var(--border)"/>
+          <rect x="24" y="86" width="152" height="8" rx="4" fill="var(--border)"/>
+          <rect x="24" y="106" width="120" height="8" rx="4" fill="var(--border)"/>
+          <rect x="24" y="126" width="152" height="8" rx="4" fill="var(--border)"/>
+          <rect x="24" y="146" width="100" height="8" rx="4" fill="var(--border)"/>
+          <text x="100" y="200" font-size="13" fill="var(--muted)" text-anchor="middle" font-family="sans-serif">학계 지원서 (SOP)</text>
+        </g>
+        <!-- 중앙 VS -->
+        <text x="350" y="205" font-size="22" fill="var(--muted)" text-anchor="middle" font-family="serif" font-weight="700">VS</text>
+        <!-- 오른쪽: 기업 자소서 -->
+        <g transform="translate(410,90)">
+          <rect x="0" y="0" width="200" height="220" rx="10" fill="var(--card-bg)" stroke="var(--accent)" stroke-width="2.5"/>
+          <rect x="20" y="20" width="36" height="36" rx="8" fill="var(--accent)"/>
+          <rect x="30" y="30" width="16" height="16" fill="var(--accent-light)"/>
+          <rect x="20" y="70" width="70" height="16" rx="8" fill="var(--accent-light)"/>
+          <text x="55" y="82" font-size="10" fill="var(--accent)" text-anchor="middle" font-family="sans-serif">지원동기</text>
+          <rect x="20" y="94" width="160" height="7" rx="3.5" fill="var(--border)"/>
+          <rect x="20" y="108" width="130" height="7" rx="3.5" fill="var(--border)"/>
+          <rect x="20" y="130" width="70" height="16" rx="8" fill="var(--green-light)"/>
+          <text x="55" y="142" font-size="10" fill="var(--green)" text-anchor="middle" font-family="sans-serif">핵심역량</text>
+          <rect x="20" y="154" width="160" height="7" rx="3.5" fill="var(--border)"/>
+          <rect x="20" y="168" width="140" height="7" rx="3.5" fill="var(--border)"/>
+          <text x="100" y="200" font-size="13" fill="var(--accent)" text-anchor="middle" font-family="sans-serif">기업 자기소개서</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>왼쪽은 학계 지원서(SOP), 오른쪽은 기업 자기소개서를 도식화한 이미지. 같은 '나를 소개하는 글'이지만 구조와 강조점이 다르다는 것을 시각적으로 보여준다.</figcaption>
+  </figure>
+
+  <h2>목적이 다르면 문체도 달라집니다</h2>
+
+  <div class="compare-box">
+    <div class="compare-item basic">
+      <div class="ci-label">학계 지원서 (SOP)</div>
+      <ul class="ci-list">
+        <li>연구 관심사의 형성 과정을 서술</li>
+        <li>지도교수·프로그램과의 학문적 적합성</li>
+        <li>장기적 연구 비전 제시</li>
+        <li>사색적이고 서사적인 문체 허용</li>
+      </ul>
+    </div>
+    <div class="compare-item extra">
+      <div class="ci-label">기업 자기소개서</div>
+      <ul class="ci-list">
+        <li>지원 직무와 즉시 연결되는 역량 제시</li>
+        <li>회사·직무와의 실무적 적합성</li>
+        <li>단기~중기 성과 기여 방안 제시</li>
+        <li>결론 먼저, 간결하고 명확한 문체</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>학계 지원서는 "왜 이 연구에 평생을 걸고 싶은가"를 설득하는 글이지만, 기업 자기소개서는 "왜 이 회사, 이 직무에 지금 필요한 사람인가"를 증명하는 글입니다. 같은 사람이 쓰더라도 완전히 다른 글이 되어야 합니다.</p>
+
+  <h2>기업 자소서가 요구하는 네 가지 항목</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">🎯</div>
+      <div class="ic-name">지원 동기</div>
+      <div class="ic-meta">회사·직무 선택 이유</div>
+      <div class="ic-desc">"연구가 좋아서"가 아니라, 왜 학계가 아닌 이 회사·직무를 선택했는지 구체적인 연결고리를 제시해야 합니다.</div>
+      <div class="ic-point">회사의 실제 사업·제품과 연결</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">💪</div>
+      <div class="ic-name">핵심 역량</div>
+      <div class="ic-meta">직무 적합성 증명</div>
+      <div class="ic-desc">연구 경험에서 나온 역량을 직무 요구사항과 직접 연결해 설명합니다. 나열이 아니라 매칭이 핵심입니다.</div>
+      <div class="ic-point">채용 공고의 키워드를 반영</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🤝</div>
+      <div class="ic-name">협업·소통 경험</div>
+      <div class="ic-meta">팀워크 증명</div>
+      <div class="ic-desc">공동연구, 조교 업무, 학회 운영 등에서 겪은 협업 경험을 팀워크 역량으로 재해석합니다.</div>
+      <div class="ic-point">갈등 해결 경험이 있으면 강점</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🚀</div>
+      <div class="ic-name">입사 후 포부</div>
+      <div class="ic-meta">현실적인 기여 계획</div>
+      <div class="ic-desc">거창한 비전보다, 입사 직후 어떤 방식으로 기여할 수 있는지 구체적으로 씁니다.</div>
+      <div class="ic-point">1년 내 실현 가능한 목표로 서술</div>
+    </div>
+  </div>
+
+  <h2>항목별 작성 기준</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>항목</th>
+        <th>학계식 접근 (피해야 함)</th>
+        <th>기업식 접근 (권장)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>지원 동기</td>
+        <td>학문적 호기심의 발전 과정 서술</td>
+        <td>회사·직무와의 구체적 연결 제시 <span class="point-badge">핵심</span></td>
+      </tr>
+      <tr>
+        <td>핵심 역량</td>
+        <td>연구 방법론을 추상적으로 나열</td>
+        <td>직무 요구 역량에 맞춰 재구성</td>
+      </tr>
+      <tr>
+        <td>협업 경험</td>
+        <td>공동연구 참여 사실만 언급</td>
+        <td>역할과 기여를 구체적 수치로 제시 <span class="point-badge">핵심</span></td>
+      </tr>
+      <tr>
+        <td>문체</td>
+        <td>배경 설명 후 결론 도출</td>
+        <td>결론 먼저, 근거는 간결하게</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>실제 적용해보면</h2>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>인문사회 박사가 기획 직무에 지원한 경우</h3>
+    <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 박사과정 내내 이론적 관심사의 변화 과정을 서술하듯, 자기소개서 지원 동기란에도 "학부 시절부터 이어진 학문적 관심이 어떻게 확장되어 왔는지"를 길게 서술했다고 가정해 보겠습니다.</p>
+    <p>이런 글은 학계 지원서로는 훌륭하지만, 기업 채용 담당자에게는 <span class="highlight">"그래서 왜 우리 회사인가"</span>에 대한 답이 늦게 나온다는 인상을 줍니다. 같은 경험을 "복잡한 문제를 구조화해 온 연구 경험을, 귀사의 신규 서비스 기획 업무에 적용하고 싶습니다"처럼 첫 문장부터 회사와 연결하면, 훨씬 명확하게 읽힙니다.</p>
+  </div>
+
+  <h2>자주 저지르는 실수 세 가지</h2>
+
+  <p>항목을 다 채워도 여전히 학계 지원서처럼 읽히는 경우가 있습니다. 제가 초안을 검토하며 반복적으로 지적하게 되는 지점들을 정리했습니다.</p>
+
+  <div class="item-grid">
+    <div class="item-card">
+      <div class="ic-icon">📖</div>
+      <div class="ic-name">배경 설명 과다</div>
+      <div class="ic-meta">서론이 절반 이상</div>
+      <div class="ic-desc">"~하게 되어", "~을 계기로" 같은 도입부가 길어지면, 정작 핵심 역량은 마지막 한 줄에 몰리게 됩니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🔬</div>
+      <div class="ic-name">전문 용어 과다</div>
+      <div class="ic-meta">학술 용어 그대로 사용</div>
+      <div class="ic-desc">채용 담당자는 해당 분야 전문가가 아닐 수 있습니다. 전문 용어는 풀어서 설명하거나 최소화해야 합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🌫️</div>
+      <div class="ic-name">추상적 포부</div>
+      <div class="ic-meta">거창하지만 막연함</div>
+      <div class="ic-desc">"인류에 기여하고 싶습니다" 같은 표현보다, 입사 후 1년 내 할 수 있는 구체적 행동을 제시하는 편이 설득력 있습니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📋</div>
+      <div class="ic-name">이력서와 중복</div>
+      <div class="ic-meta">사실 나열 반복</div>
+      <div class="ic-desc">이력서에 이미 있는 경력을 그대로 다시 나열하기보다, 자기소개서에서는 그 경험의 맥락과 의미를 설명해야 합니다.</div>
+    </div>
+  </div>
+
+  <h2>작성 전 체크리스트</h2>
+
+  <div class="checklist">
+    <div class="cl-label">제출 전 점검 사항</div>
+    <div class="cl-item"><strong>첫 문장 확인</strong> — 첫 문장에서 지원 직무와의 연결이 드러나는가</div>
+    <div class="cl-item"><strong>회사명 언급</strong> — 다른 회사에도 그대로 낼 수 있는 범용 문장은 아닌가</div>
+    <div class="cl-item"><strong>역량-직무 매칭</strong> — 나열한 역량이 채용 공고의 요구사항과 연결되는가</div>
+    <div class="cl-item"><strong>문장 길이</strong> — 한 문단이 5줄을 넘지 않는가</div>
+    <div class="cl-item"><strong>구체적 수치</strong> — 협업·성과 관련 항목에 숫자가 들어갔는가</div>
+  </div>
+
+  <h2>작성 순서</h2>
+
+  <div class="how-box">
+    <div class="hb-label">단계별 작성 방법</div>
+    <div class="how-item">
+      <div class="how-num">1</div>
+      <div class="how-text">지원 회사의 <strong>채용 공고와 사업 소개</strong>를 먼저 정독합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">2</div>
+      <div class="how-text">본인 경험 중 <strong>공고 요구사항과 겹치는 것</strong>을 먼저 골라냅니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">3</div>
+      <div class="how-text">항목별로 <strong>결론 문장을 먼저</strong> 쓴 뒤, 근거를 뒤에 붙입니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">4</div>
+      <div class="how-text">학계식 서술(배경-과정-결론)이 남아있지 않은지 <strong>다시 점검</strong>합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">5</div>
+      <div class="how-text">비전공자에게 읽혀보고 <strong>이해가 되는지 확인</strong>합니다.</div>
+    </div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 서사가 아니라 매칭입니다</h3>
+  <p>학문적 여정을 감동적으로 풀어내는 것보다, 직무 요구사항과 정확히 맞아떨어지는 문장이 더 강력합니다.</p>
+
+  <h3>두 번째, 결론을 뒤에 숨기지 않습니다</h3>
+  <p>학계 글쓰기 습관대로 배경부터 풀어내면, 채용 담당자는 결론을 보기도 전에 다음 지원자로 넘어갈 수 있습니다.</p>
+
+  <h3>세 번째, 같은 글을 여러 회사에 재사용하지 않습니다</h3>
+  <p>지원 동기만큼은 회사마다 다시 써야 합니다. 범용 문장은 티가 나기 마련입니다.</p>
+
+  <div class="conclusion-box">
+    <h3>다른 독자에게는 다른 글이 필요합니다</h3>
+    <p>학계 지원서와 기업 자기소개서는 같은 '나'를 다루지만, 읽는 사람이 다르기 때문에 완전히 다른 글이 되어야 합니다.</p>
+    <p>지금 쓰고 있는 자기소개서가 있다면, 첫 문단만이라도 "결론 먼저" 구조로 다시 써보시길 권합니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글은 일반적인 자기소개서 작성 경향을 정리한 정보성 콘텐츠입니다. 실제 평가 기준은 기업과 직무에 따라 다르므로, 지원 전 해당 기업의 채용 공고와 안내를 함께 확인하시기 바랍니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#박사자기소개서</span>
+    <span class="tag">#자소서작성법</span>
+    <span class="tag">#학계지원서</span>
+    <span class="tag">#SOP작성</span>
+    <span class="tag">#연구직이직</span>
+    <span class="tag">#커리어전환</span>
+    <span class="tag">#박사이직</span>
+    <span class="tag">#자기소개서첨삭</span>
+  </div>
+
+</div>
+</body>
+</html>
