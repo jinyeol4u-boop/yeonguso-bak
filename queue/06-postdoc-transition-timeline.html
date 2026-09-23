@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포닥 계약 종료 전 미리 준비해야 할 이직 타임라인 | 연구소 밖 이야기</title>
+<!-- 추천 제목: 포닥 계약 종료 전 미리 준비해야 할 이직 타임라인 -->
+<meta name="description" content="포닥 계약 종료가 다가올 때 언제부터 무엇을 준비해야 하는지, 시기별 타임라인을 정리했습니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5; --text: #2c2c2c; --accent: #1a5276; --accent-light: #e8f4fd;
+  --muted: #727272; --border: #e8e0d5; --card-bg: #ffffff;
+  --green: #1e8449; --green-light: #e8f5ee;
+  --orange: #d35400; --orange-light: #fef3e2;
+  --purple: #6e2f8a; --purple-light: #f4eefa;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+.summary-card { background: var(--accent-light); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 40px 0; }
+.summary-card .label { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 1px; margin-bottom: 10px; }
+.summary-card p { font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0; }
+h2 { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 700; margin: 50px 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--border); color: var(--text); }
+h2::before { content: ''; display: inline-block; width: 4px; height: 20px; background: var(--accent); margin-right: 12px; vertical-align: middle; border-radius: 2px; }
+h3 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 600; margin: 32px 0 14px; color: var(--text); }
+p { margin-bottom: 20px; word-break: keep-all; }
+.highlight { background: none; border-bottom: none; text-decoration: none; font-weight: 600; color: var(--accent); }
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+figure { margin: 0 0 30px; }
+figcaption { font-size: 13px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.6; word-break: keep-all; }
+.compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+.compare-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; }
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; margin-bottom: 12px; }
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--text); line-height: 2; }
+.item-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
+.item-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.item-card .ic-meta { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point { margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500; }
+.item-card.highlight-card { border: 2px solid var(--accent); background: var(--accent-light); }
+.item-card.highlight-card .ic-name { color: var(--accent); }
+.data-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+.data-table th { background: var(--accent); color: white; padding: 12px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.6; font-size: 14px; }
+.data-table tr:nth-child(even) td { background: #f8f8f8; }
+.point-badge { display: inline-block; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+.example-card { background: var(--orange-light); border: 1px solid #f0c080; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.example-card .ec-label { font-size: 12px; font-weight: 600; color: var(--orange); letter-spacing: 1px; margin-bottom: 12px; }
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+.checklist { background: var(--green-light); border: 1px solid #a8d5b8; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.checklist .cl-label { font-size: 12px; font-weight: 600; color: var(--green); letter-spacing: 1px; margin-bottom: 14px; }
+.cl-item { margin-bottom: 10px; font-size: 15px; color: #1a5c35; line-height: 1.7; }
+.cl-item:last-child { margin-bottom: 0; }
+.how-box { background: var(--purple-light); border: 1px solid #d4a8e8; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.how-box .hb-label { font-size: 12px; font-weight: 600; color: var(--purple); letter-spacing: 1px; margin-bottom: 14px; }
+.how-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+.how-item:last-child { margin-bottom: 0; }
+.how-num { width: 26px; height: 26px; border-radius: 50%; background: var(--purple); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; margin-top: 2px; }
+.how-text { font-size: 15px; color: #3a1a5a; line-height: 1.75; }
+.how-text strong { color: var(--purple); }
+.experience-box { background: linear-gradient(135deg, #fdf6e8, #fef3e2); border: 1px solid #e8c07a; border-radius: 14px; padding: 28px 30px; margin: 34px 0; }
+.experience-box .exp-label { font-size: 12px; font-weight: 700; color: var(--orange); letter-spacing: 1px; margin-bottom: 14px; }
+.experience-box p { font-size: 15.5px; color: #4a3212; margin-bottom: 14px; }
+.experience-box p:last-child { margin-bottom: 0; }
+.conclusion-box { background: linear-gradient(135deg, #0d1a2d, #1a3050); color: white; border-radius: 16px; padding: 36px 32px; margin: 50px 0; }
+.conclusion-box h3 { font-family: 'Noto Serif KR', serif; color: #aed6f1; font-size: 20px; margin-bottom: 16px; }
+.conclusion-box p { color: rgba(255,255,255,0.87); font-size: 15px; margin-bottom: 12px; }
+.conclusion-box p:last-child { margin-bottom: 0; }
+.disclaimer { background: #f5f5f5; border-radius: 8px; padding: 16px 20px; font-size: 13px; color: var(--muted); margin: 30px 0; line-height: 1.7; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0; padding-top: 24px; border-top: 1px solid var(--border); }
+.tag { background: var(--accent-light); color: var(--accent); font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+.back-nav { max-width: 740px; margin: 0 auto; padding: 20px 20px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 14px; }
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; } .item-grid { grid-template-columns: 1fr; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .data-table td, .data-table th { padding: 10px; font-size: 13px; }
+  h2 { font-size: 19px; } body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>포닥 계약은 종료 시점이 명확한데도, 막상 이직 준비는 마지막 몇 달에 몰아서 하다 급해지는 경우가 많습니다. 계약 종료 6개월 전부터의 시기별 준비 사항을 정리했습니다.</p>
+  </div>
+
+  <p>포닥 계약은 보통 1~2년 단위로 명확한 종료일이 정해져 있습니다. 그런데도 많은 분들이 "아직 시간이 있다"고 생각하다가, 계약 종료 두세 달 전에야 이직 준비를 시작해 급하게 서류를 준비하는 경우를 자주 봅니다. 연구 성과를 마무리하는 데 에너지를 쏟다 보면, 정작 다음 단계를 준비할 시간을 뒤로 미루게 되는 것도 자연스러운 일입니다.</p>
+
+  <p>이 글에서는 계약 종료일을 기준으로 <span class="highlight">역산해서 준비해야 할 항목들을 시기별로 정리</span>했습니다. 지금 본인의 계약이 얼마나 남았는지부터 확인하며 읽어보시길 권합니다.</p>
+
+  <div class="experience-box">
+    <div class="exp-label">제가 상담에서 직접 확인한 것</div>
+    <p>제가 상담을 진행하며 반복적으로 느낀 것은, 포닥분들이 연구 마무리에 집중하다 보면 이직 준비 타이밍을 놓치기 쉽다는 점입니다. 어떤 분은 계약 종료 한 달을 남기고서야 경력기술서를 처음 써보겠다고 연락 주신 적도 있었는데, 그 짧은 시간에 좋은 서류를 완성하기란 쉽지 않았습니다.</p>
+    <p>그래서 저는 항상 계약 종료 6개월 전을 이직 준비의 실질적인 출발선으로 삼으시라고 권합니다. 이 정도 여유가 있어야 서류 준비, 지원, 면접까지 무리 없이 이어갈 수 있습니다. 실제로 이 기준을 따라 준비하신 분들은, 계약 종료 시점에 공백 없이 바로 다음 자리로 이어지는 경우가 많았습니다.</p>
+  </div>
+
+  <figure>
+    <div class="img-illustration"><svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g8" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="var(--accent-light)"/><stop offset="100%" stop-color="var(--card-bg)"/>
+        </linearGradient></defs>
+        <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#g8)"/>
+        <g transform="translate(140,140)">
+          <circle cx="0" cy="0" r="60" fill="var(--card-bg)" stroke="var(--muted)" stroke-width="2.5"/>
+          <text x="0" y="16" font-size="42" text-anchor="middle" font-family="sans-serif">🔬</text>
+        </g>
+        <text x="350" y="155" font-size="30" fill="var(--accent)" text-anchor="middle" font-family="sans-serif">→</text>
+        <g transform="translate(560,140)">
+          <circle cx="0" cy="0" r="60" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="0" y="16" font-size="42" text-anchor="middle" font-family="sans-serif">💼</text>
+        </g>
+        <text x="140" y="230" font-size="14" fill="var(--muted)" text-anchor="middle" font-family="sans-serif">포닥 계약 중</text>
+        <text x="560" y="230" font-size="14" fill="var(--accent)" text-anchor="middle" font-family="sans-serif" font-weight="700">이직 준비 시작</text>
+      </svg></div>
+    <figcaption>포닥 계약 종료 시점과 이직 준비를 시작해야 할 시점 사이의 간격을 보여주는 이미지.</figcaption>
+  </figure>
+
+  <h2>시기별 준비 사항</h2>
+
+  <table class="data-table">
+    <thead><tr><th>시점</th><th>해야 할 일</th><th>비고</th></tr></thead>
+    <tbody>
+      <tr><td>종료 6개월 전</td><td>경력기술서·자기소개서 초안 작성 시작</td><td>가장 놓치기 쉬운 시점 <span class="point-badge">핵심</span></td></tr>
+      <tr><td>종료 4~5개월 전</td><td>지원 직무·기업 리스트업, 네트워킹</td><td>채용 공고 패턴 파악</td></tr>
+      <tr><td>종료 3개월 전</td><td>본격적인 지원 시작</td><td>서류 통과까지 시차 고려</td></tr>
+      <tr><td>종료 1~2개월 전</td><td>면접 집중, 처우 협상 준비</td><td>공백기 최소화 가능</td></tr>
+      <tr><td>종료 시점</td><td>퇴사 행정 절차 병행 처리</td><td>4대보험·경력증명서 발급</td></tr>
+    </tbody>
+  </table>
+
+  <h2>시기별 흔한 실수</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">⏰</div>
+      <div class="ic-name">연구 마무리 우선</div>
+      <div class="ic-meta">6개월 전</div>
+      <div class="ic-desc">논문 마무리에 집중하다 서류 준비를 뒤로 미루는 경우가 가장 흔합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📮</div>
+      <div class="ic-name">지원 시점 지연</div>
+      <div class="ic-meta">3개월 전</div>
+      <div class="ic-desc">서류 통과부터 처우 협상까지 걸리는 시간을 과소평가해 지원을 늦게 시작합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🗂️</div>
+      <div class="ic-name">추천서 요청 지연</div>
+      <div class="ic-meta">공통</div>
+      <div class="ic-desc">지도교수·공동연구자 추천서는 요청부터 작성까지 시간이 걸리므로 미리 부탁해야 합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">💬</div>
+      <div class="ic-name">퇴사 통보 시점</div>
+      <div class="ic-meta">1개월 전</div>
+      <div class="ic-desc">기존 소속 기관에 이직 사실을 알리는 시점도 미리 계획해두는 것이 좋습니다.</div>
+    </div>
+  </div>
+
+  <h2>시기별 세부 실행 방법</h2>
+
+  <div class="how-box">
+    <div class="hb-label">단계별 진행 방법</div>
+    <div class="how-item"><div class="how-num">1</div><div class="how-text"><strong>6개월 전</strong>: 최근 3년 경력을 정리한 초안을 작성하고, 지원하려는 직무 유형을 2~3개로 좁힙니다.</div></div>
+    <div class="how-item"><div class="how-num">2</div><div class="how-text"><strong>5개월 전</strong>: 지도교수와 공동연구자에게 추천서를 미리 요청하고, 관심 기업·연구소 목록을 만듭니다.</div></div>
+    <div class="how-item"><div class="how-num">3</div><div class="how-text"><strong>3개월 전</strong>: 채용 공고를 매주 확인하며 본격적으로 지원을 시작합니다.</div></div>
+    <div class="how-item"><div class="how-num">4</div><div class="how-text"><strong>1~2개월 전</strong>: 면접 일정을 조율하고, 처우 협상 전 본인의 희망 조건을 정리해둡니다.</div></div>
+  </div>
+
+  <h2>준비 체크리스트</h2>
+
+  <div class="checklist">
+    <div class="cl-label">시기별 점검 사항</div>
+    <div class="cl-item"><strong>6개월 전</strong> — 경력기술서 초안 작성 시작</div>
+    <div class="cl-item"><strong>5개월 전</strong> — 추천서 요청 완료</div>
+    <div class="cl-item"><strong>3개월 전</strong> — 본격 지원 시작</div>
+    <div class="cl-item"><strong>1개월 전</strong> — 퇴사 절차·4대보험 정리 확인</div>
+    <div class="cl-item"><strong>공백기 대비</strong> — 계약과 새 직장 사이 공백이 생길 경우 국민연금·건강보험 처리 방법 확인</div>
+  </div>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>계약 종료 3개월을 남기고 상담을 청한 경우</h3>
+    <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 계약 종료를 3개월 앞두고 처음 경력기술서를 준비하기 시작했다고 가정해 보겠습니다. 이 경우 서류를 다듬는 데만 2~3주가 걸리고, 서류 심사와 면접까지 이어지면 실제 지원 가능한 공고 수가 크게 줄어듭니다.</p>
+    <p>반대로 6개월 전부터 준비를 시작했다면, 초반에 지원한 곳에서 아쉬운 결과가 나와도 <span class="highlight">다음 지원 기회를 준비할 시간</span>이 충분히 남습니다. 타임라인의 여유가 곧 선택지의 폭이 됩니다. 급하게 아무 곳이나 선택하지 않아도 되는 상황 자체가, 협상에서도 심리적으로 유리하게 작용합니다.</p>
+  </div>
+
+  <h2>흔히 놓치는 세부 사항들</h2>
+
+  <p>타임라인을 세워두어도, 실제로 진행하다 보면 세부적인 부분에서 막히는 경우가 많습니다. 제가 상담에서 자주 안내드리는 몇 가지를 추가로 정리했습니다.</p>
+
+  <div class="item-grid">
+    <div class="item-card">
+      <div class="ic-icon">📧</div>
+      <div class="ic-name">기관별 처리 속도 차이</div>
+      <div class="ic-meta">서류 발급 시간</div>
+      <div class="ic-desc">경력증명서, 재직증명서 등은 기관마다 발급 소요 시간이 다르므로, 지원 마감 직전이 아니라 미리 요청해두는 것이 안전합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🗓️</div>
+      <div class="ic-name">면접 일정 조율</div>
+      <div class="ic-meta">복수 지원 시</div>
+      <div class="ic-desc">여러 곳에 동시에 지원했다면, 면접 일정이 겹치지 않도록 미리 캘린더로 관리해두는 것이 좋습니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">💵</div>
+      <div class="ic-name">처우 협상 기준</div>
+      <div class="ic-meta">희망 연봉 범위</div>
+      <div class="ic-desc">협상 전에 본인의 최소 수용 조건과 희망 조건을 미리 정리해두면, 제안을 받았을 때 즉흥적으로 결정하지 않아도 됩니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🔄</div>
+      <div class="ic-name">동시 진행 관리</div>
+      <div class="ic-meta">여러 회사 동시 지원</div>
+      <div class="ic-desc">한 곳의 결과만 기다리기보다, 여러 곳에 동시에 지원해 선택지를 넓히는 편이 협상에서도 유리합니다.</div>
+    </div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 계약 종료일은 이미 정해져 있습니다</h3>
+  <p>불확실한 게 아니라 확정된 날짜이므로, 역산해서 준비 일정을 세울 수 있습니다.</p>
+
+  <h3>두 번째, 서류 준비가 가장 먼저입니다</h3>
+  <p>지원할 준비가 되어 있어야, 좋은 공고가 떴을 때 바로 움직일 수 있습니다.</p>
+
+  <h3>세 번째, 여유를 두면 협상력이 생깁니다</h3>
+  <p>급하게 이직하지 않아도 되는 상황이어야, 처우 협상에서도 여유를 가질 수 있습니다.</p>
+
+  <div class="conclusion-box">
+    <h3>6개월 전이 진짜 출발선입니다</h3>
+    <p>포닥 계약 종료는 갑자기 닥치는 일이 아니라 미리 알 수 있는 일정입니다. 오늘 정리한 타임라인을 기준으로 본인의 남은 시간을 계산해보시길 권합니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글은 일반적인 이직 준비 경향을 정리한 정보성 콘텐츠입니다. 실제 절차는 소속 기관과 지원 기업에 따라 다를 수 있습니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#포닥이직</span><span class="tag">#이직타임라인</span><span class="tag">#연구직이직</span>
+    <span class="tag">#박사이직준비</span><span class="tag">#커리어전환</span><span class="tag">#계약직이직</span>
+  </div>
+
+</div>
+</body>
+</html>
