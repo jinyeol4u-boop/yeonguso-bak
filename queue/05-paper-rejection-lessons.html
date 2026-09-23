@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>논문 리젝을 겪고 배운 것들 | 연구소 밖 이야기</title>
+<!-- 추천 제목: 논문 리젝을 겪고 배운 것들 -->
+<meta name="description" content="논문 리젝을 마주하는 태도와 그 경험에서 배울 수 있는 것들을 정리한 에세이입니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5; --text: #2c2c2c; --accent: #1a5276; --accent-light: #e8f4fd;
+  --muted: #727272; --border: #e8e0d5; --card-bg: #ffffff;
+  --green: #1e8449; --green-light: #e8f5ee;
+  --orange: #d35400; --orange-light: #fef3e2;
+  --purple: #6e2f8a; --purple-light: #f4eefa;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); line-height: 1.9; font-size: 17px; }
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+.summary-card { background: var(--accent-light); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; padding: 24px 28px; margin: 40px 0; }
+.summary-card .label { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 1px; margin-bottom: 10px; }
+.summary-card p { font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0; }
+h2 { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 700; margin: 50px 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--border); color: var(--text); }
+h2::before { content: ''; display: inline-block; width: 4px; height: 20px; background: var(--accent); margin-right: 12px; vertical-align: middle; border-radius: 2px; }
+h3 { font-family: 'Noto Serif KR', serif; font-size: 18px; font-weight: 600; margin: 32px 0 14px; color: var(--text); }
+p { margin-bottom: 20px; word-break: keep-all; }
+.highlight { background: none; border-bottom: none; text-decoration: none; font-weight: 600; color: var(--accent); }
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+figure { margin: 0 0 30px; }
+figcaption { font-size: 13px; color: var(--muted); text-align: center; margin-top: 10px; line-height: 1.6; word-break: keep-all; }
+.compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+.compare-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; }
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label { font-size: 12px; font-weight: 600; letter-spacing: 1px; margin-bottom: 12px; }
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list { list-style: none; padding: 0; margin: 0; font-size: 14px; color: var(--text); line-height: 2; }
+.item-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0; }
+.item-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.item-card .ic-meta { font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px; }
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point { margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500; }
+.item-card.highlight-card { border: 2px solid var(--accent); background: var(--accent-light); }
+.item-card.highlight-card .ic-name { color: var(--accent); }
+.data-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 15px; }
+.data-table th { background: var(--accent); color: white; padding: 12px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; line-height: 1.6; font-size: 14px; }
+.data-table tr:nth-child(even) td { background: #f8f8f8; }
+.point-badge { display: inline-block; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+.example-card { background: var(--orange-light); border: 1px solid #f0c080; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.example-card .ec-label { font-size: 12px; font-weight: 600; color: var(--orange); letter-spacing: 1px; margin-bottom: 12px; }
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+.checklist { background: var(--green-light); border: 1px solid #a8d5b8; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.checklist .cl-label { font-size: 12px; font-weight: 600; color: var(--green); letter-spacing: 1px; margin-bottom: 14px; }
+.cl-item { margin-bottom: 10px; font-size: 15px; color: #1a5c35; line-height: 1.7; }
+.cl-item:last-child { margin-bottom: 0; }
+.how-box { background: var(--purple-light); border: 1px solid #d4a8e8; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+.how-box .hb-label { font-size: 12px; font-weight: 600; color: var(--purple); letter-spacing: 1px; margin-bottom: 14px; }
+.how-item { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+.how-item:last-child { margin-bottom: 0; }
+.how-num { width: 26px; height: 26px; border-radius: 50%; background: var(--purple); color: white; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; margin-top: 2px; }
+.how-text { font-size: 15px; color: #3a1a5a; line-height: 1.75; }
+.how-text strong { color: var(--purple); }
+.experience-box { background: linear-gradient(135deg, #fdf6e8, #fef3e2); border: 1px solid #e8c07a; border-radius: 14px; padding: 28px 30px; margin: 34px 0; }
+.experience-box .exp-label { font-size: 12px; font-weight: 700; color: var(--orange); letter-spacing: 1px; margin-bottom: 14px; }
+.experience-box p { font-size: 15.5px; color: #4a3212; margin-bottom: 14px; }
+.experience-box p:last-child { margin-bottom: 0; }
+.conclusion-box { background: linear-gradient(135deg, #0d1a2d, #1a3050); color: white; border-radius: 16px; padding: 36px 32px; margin: 50px 0; }
+.conclusion-box h3 { font-family: 'Noto Serif KR', serif; color: #aed6f1; font-size: 20px; margin-bottom: 16px; }
+.conclusion-box p { color: rgba(255,255,255,0.87); font-size: 15px; margin-bottom: 12px; }
+.conclusion-box p:last-child { margin-bottom: 0; }
+.disclaimer { background: #f5f5f5; border-radius: 8px; padding: 16px 20px; font-size: 13px; color: var(--muted); margin: 30px 0; line-height: 1.7; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0; padding-top: 24px; border-top: 1px solid var(--border); }
+.tag { background: var(--accent-light); color: var(--accent); font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 500; }
+.back-nav { max-width: 740px; margin: 0 auto; padding: 20px 20px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 14px; }
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; } .item-grid { grid-template-columns: 1fr; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .data-table td, .data-table th { padding: 10px; font-size: 13px; }
+  h2 { font-size: 19px; } body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>논문 리젝은 연구자라면 누구나 겪는 일이지만, 그 경험에서 얻을 수 있는 것들도 분명히 있습니다. 리젝을 대하는 태도에 대해 담백하게 정리한 에세이입니다.</p>
+  </div>
+
+  <p>논문을 투고해본 사람이라면 누구나 리젝 메일을 받아본 경험이 있을 겁니다. 처음 받는 리젝은 유독 아프게 느껴지지만, 반복되다 보면 그 안에서 배우는 것들이 분명히 있습니다.</p>
+
+  <p>이 글은 <span class="highlight">논문 리젝을 겪으며 배운 것들</span>을 담백하게 정리한 에세이입니다. 리젝이 아프지 않다는 이야기가 아니라, 그 경험을 어떻게 다음으로 이어갈 수 있는지에 대한 이야기입니다.</p>
+
+  <div class="experience-box">
+    <div class="exp-label">제가 직접 지켜본 이야기</div>
+    <p>저 역시 오랜 학계 생활 동안 여러 번의 리젝을 겪었고, 20년 가까이 논문 컨설팅을 하며 훨씬 더 많은 분들의 리젝 사례를 함께 지켜봐 왔습니다. 리젝 메일을 받고 며칠을 힘들어하시던 분이, 심사평을 하나씩 다시 읽어보며 논문을 고쳐나가는 과정을 함께한 적이 있습니다.</p>
+    <p>그분은 결국 그 논문을 다른 저널에 게재했는데, 나중에 "리젝 덕분에 논문이 훨씬 탄탄해졌다"고 말씀하셨습니다. 그 말이 지금도 기억에 남습니다. 리젝은 끝이 아니라, 논문을 더 나은 방향으로 다듬을 기회이기도 합니다.</p>
+  </div>
+
+  <figure>
+    <div class="img-illustration">
+      <svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="g14" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="var(--accent-light)"/><stop offset="100%" stop-color="var(--card-bg)"/>
+        </linearGradient></defs>
+        <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#g14)"/>
+        <g transform="translate(180,197)">
+          <circle cx="0" cy="0" r="60" fill="var(--card-bg)" stroke="var(--muted)" stroke-width="2.5"/>
+          <text x="0" y="14" font-size="36" text-anchor="middle" font-family="sans-serif">📩</text>
+          <text x="0" y="95" font-size="13" fill="var(--muted)" text-anchor="middle" font-family="sans-serif">리젝 메일</text>
+        </g>
+        <path d="M270 197 Q350 150 430 197" stroke="var(--accent)" stroke-width="3" fill="none" stroke-dasharray="5 6"/>
+        <g transform="translate(520,197)">
+          <circle cx="0" cy="0" r="60" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="0" y="14" font-size="36" text-anchor="middle" font-family="sans-serif">📈</text>
+          <text x="0" y="95" font-size="13" fill="var(--accent)" text-anchor="middle" font-family="sans-serif" font-weight="700">더 나아진 논문</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>리젝을 거쳐 더 나아진 논문으로 이어지는 과정을 도식화한 이미지.</figcaption>
+  </figure>
+
+  <h2>리젝을 마주하는 두 가지 태도</h2>
+
+  <div class="compare-box">
+    <div class="compare-item basic">
+      <div class="ci-label">리젝에 매몰되는 태도</div>
+      <ul class="ci-list">
+        <li>심사평을 감정적으로 받아들임</li>
+        <li>논문 자체를 부정적으로 평가</li>
+        <li>재투고를 미루거나 포기</li>
+      </ul>
+    </div>
+    <div class="compare-item extra">
+      <div class="ci-label">리젝을 활용하는 태도</div>
+      <ul class="ci-list">
+        <li>심사평을 항목별로 정리해 검토</li>
+        <li>논문의 약점을 구체적으로 파악</li>
+        <li>다른 저널 투고 계획을 바로 세움</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>리젝에서 배울 수 있는 것들</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">🔍</div>
+      <div class="ic-name">논리의 빈틈 발견</div>
+      <div class="ic-meta">심사평의 가치</div>
+      <div class="ic-desc">심사자는 저자가 보지 못한 논리적 빈틈을 짚어주는 경우가 많습니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🎯</div>
+      <div class="ic-name">저널 적합성 재검토</div>
+      <div class="ic-meta">방향성 점검</div>
+      <div class="ic-desc">리젝을 계기로 논문의 방향과 저널의 성격이 맞았는지 다시 점검하게 됩니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">💪</div>
+      <div class="ic-name">회복력 훈련</div>
+      <div class="ic-meta">반복되는 평가</div>
+      <div class="ic-desc">반복되는 평가와 거절을 다루는 경험은, 이후 커리어에서도 도움이 되는 회복력을 길러줍니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">✍️</div>
+      <div class="ic-name">글쓰기 실력 향상</div>
+      <div class="ic-meta">반복적 수정</div>
+      <div class="ic-desc">여러 번 고쳐 쓰는 과정 자체가 학술적 글쓰기 실력을 늘려주는 훈련이 됩니다.</div>
+    </div>
+  </div>
+
+  <h2>실제 상황에 적용해보면</h2>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>첫 논문이 리젝된 대학원생의 경우</h3>
+    <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 첫 단독 논문이 리젝되어 크게 낙담했다고 가정해 보겠습니다.</p>
+    <p>이런 경우 며칠간 심사평을 다시 들여다보지 못하는 것은 자연스러운 일입니다. 다만 <span class="highlight">일주일 정도 시간을 두고 다시 읽어보면</span>, 처음엔 공격처럼 느껴졌던 지적들이 실제로는 논문을 보완할 구체적인 힌트였다는 걸 발견하게 되는 경우가 많습니다.</p>
+  </div>
+
+  <h2>리젝 이후 마음가짐 체크리스트</h2>
+
+  <div class="checklist">
+    <div class="cl-label">재투고 전 점검</div>
+    <div class="cl-item"><strong>시간 두기</strong> — 감정이 가라앉을 때까지 며칠 기다리기</div>
+    <div class="cl-item"><strong>심사평 항목화</strong> — 지적 사항을 하나씩 정리해보기</div>
+    <div class="cl-item"><strong>저널 재검토</strong> — 논문 성격과 저널이 맞는지 다시 확인</div>
+    <div class="cl-item"><strong>재투고 계획</strong> — 다음 저널이나 수정 방향 미리 정하기</div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 리젝은 실력 부족의 증거가 아닙니다</h3>
+  <p>저널과의 방향이 맞지 않았거나, 운이 따르지 않은 경우도 많습니다.</p>
+
+  <h3>두 번째, 심사평은 무료로 받는 피드백입니다</h3>
+  <p>비판적으로 들리더라도, 논문을 개선할 수 있는 구체적인 자료로 활용할 수 있습니다.</p>
+
+  <h3>세 번째, 반복되는 경험이 회복력을 키웁니다</h3>
+  <p>리젝을 다루는 경험이 쌓일수록, 다음 평가를 마주하는 마음도 단단해집니다.</p>
+
+  <div class="conclusion-box">
+    <h3>리젝은 끝이 아니라 과정의 일부입니다</h3>
+    <p>지금 리젝 메일을 받고 힘드신 상황이라면, 심사평을 며칠 뒤 다시 읽어보시길 권합니다. 그 안에 다음 논문을 더 좋게 만들 힌트가 있을 가능성이 큽니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글은 논문 리젝과 재투고 과정에 대한 일반적인 경향을 정리한 에세이 성격의 글입니다. 실제 경험은 분야와 저널에 따라 다를 수 있습니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#논문리젝</span><span class="tag">#논문투고</span><span class="tag">#연구자이야기</span>
+    <span class="tag">#연구소안이야기</span><span class="tag">#대학원생활</span><span class="tag">#학술적글쓰기</span>
+  </div>
+
+</div>
+</body>
+</html>
