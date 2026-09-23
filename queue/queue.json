@@ -1,0 +1,26 @@
+[
+  {
+    "content_file": "queue/01-advisor-vs-boss.html",
+    "target": "posts/advisor-vs-boss.html",
+    "category_file": "categories/lab-life.html",
+    "category_tag": "연구소 안 이야기",
+    "title": "지도교수와의 관계, 회사 상사와는 어떻게 다른가",
+    "desc": "지도교수-대학원생 관계와 회사 상사-팀원 관계는 구조 자체가 다릅니다. 그 차이를 상담 경험을 바탕으로 정리했습니다."
+  },
+  {
+    "content_file": "queue/02-cover-letter-examples.html",
+    "target": "posts/cover-letter-sentence-examples.html",
+    "category_file": "categories/toolkit.html",
+    "category_tag": "실무 도구함",
+    "title": "자기소개서에 연구 경험 녹이는 문장 예시 모음",
+    "desc": "연구 경험을 자기소개서 문장으로 바꿀 때 참고할 수 있는 상황별 예시와 Before/After 비교를 정리했습니다."
+  },
+  {
+    "content_file": "queue/03-why-left-research.html",
+    "target": "posts/interview-why-left-research.html",
+    "category_file": "categories/career-transition.html",
+    "category_tag": "이직·커리어 전환",
+    "title": "면접에서 \"왜 연구를 그만두셨나요\"에 답하는 법",
+    "desc": "연구직 이직 면접에서 가장 자주 나오는 질문에 흔들리지 않고 답하는 방법을, 실제 상담 경험을 바탕으로 정리했습니다."
+  }
+]
