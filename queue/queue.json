@@ -14,5 +14,69 @@
     "category_tag": "이직·커리어 전환",
     "title": "면접에서 \"왜 연구를 그만두셨나요\"에 답하는 법",
     "desc": "연구직 이직 면접에서 가장 자주 나오는 질문에 흔들리지 않고 답하는 방법을, 실제 상담 경험을 바탕으로 정리했습니다."
+  },
+  {
+    "content_file": "queue/04-ta-national-pension.html",
+    "target": "posts/ta-national-pension.html",
+    "category_file": "categories/systems-procedures.html",
+    "category_tag": "제도와 절차",
+    "title": "대학원 조교·연구원 경력, 국민연금 가입 기간으로 인정되나",
+    "desc": "대학원 조교·연구원으로 일한 기간이 국민연금 가입 기간으로 인정되는 조건을 정리했습니다."
+  },
+  {
+    "content_file": "queue/05-paper-rejection-lessons.html",
+    "target": "posts/paper-rejection-lessons.html",
+    "category_file": "categories/lab-life.html",
+    "category_tag": "연구소 안 이야기",
+    "title": "논문 리젝을 겪고 배운 것들",
+    "desc": "논문 리젝을 마주하는 태도와 그 경험에서 배울 수 있는 것들을 정리한 에세이입니다."
+  },
+  {
+    "content_file": "queue/06-postdoc-transition-timeline.html",
+    "target": "posts/postdoc-transition-timeline.html",
+    "category_file": "categories/career-transition.html",
+    "category_tag": "이직·커리어 전환",
+    "title": "포닥 계약 종료 전 미리 준비해야 할 이직 타임라인",
+    "desc": "포닥 계약 종료가 다가올 때 언제부터 무엇을 준비해야 하는지, 시기별 타임라인을 정리했습니다."
+  },
+  {
+    "content_file": "queue/07-career-certificate-request.html",
+    "target": "posts/career-certificate-request.html",
+    "category_file": "categories/systems-procedures.html",
+    "category_tag": "제도와 절차",
+    "title": "이직 시 경력증명서 발급, 어디에 요청해야 하나",
+    "desc": "연구직은 소속이 복잡해 경력증명서 발급처를 헷갈리기 쉽습니다. 소속 형태별 발급처와 준비 방법을 정리했습니다."
+  },
+  {
+    "content_file": "queue/08-researcher-to-planner-faq.html",
+    "target": "posts/researcher-to-planner-faq.html",
+    "category_file": "categories/career-transition.html",
+    "category_tag": "이직·커리어 전환",
+    "title": "연구원에서 기획자로, 직무 전환 시 자주 나오는 질문들",
+    "desc": "연구원에서 기획 직무로 전환할 때 자주 나오는 질문들과 답변을 상담 경험을 바탕으로 정리했습니다."
+  },
+  {
+    "content_file": "queue/09-freelance-to-fulltime-tax.html",
+    "target": "posts/freelance-to-fulltime-tax.html",
+    "category_file": "categories/systems-procedures.html",
+    "category_tag": "제도와 절차",
+    "title": "프리랜서 연구 용역에서 정규직 전환 시 세금 처리",
+    "desc": "프리랜서 연구 용역 소득과 정규직 근로소득이 함께 있는 해의 세금 처리 방법을 정리했습니다."
+  },
+  {
+    "content_file": "queue/10-research-labor-cost-career-proof.html",
+    "target": "posts/research-labor-cost-career-proof.html",
+    "category_file": "categories/systems-procedures.html",
+    "category_tag": "제도와 절차",
+    "title": "연구비 인건비로 일한 경력, 경력증명에 활용하는 법",
+    "desc": "연구과제 인건비로 일한 경력을 이직 서류에서 증빙하는 방법과 활용 가능한 서류를 정리했습니다."
+  },
+  {
+    "content_file": "queue/11-data-analyst-transition.html",
+    "target": "posts/data-analyst-transition.html",
+    "category_file": "categories/career-transition.html",
+    "category_tag": "이직·커리어 전환",
+    "title": "연구직에서 기업 데이터 분석가로, 실제 이직 경로 정리",
+    "desc": "연구직에서 기업 데이터 분석가로 옮기려는 연구자·박사를 위해, 필요한 역량과 포트폴리오 준비, 전형 단계를 정리했습니다."
   }
 ]
