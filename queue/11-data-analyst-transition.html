@@ -1,0 +1,544 @@
+<!-- 추천 제목: 연구직에서 기업 데이터 분석가로, 실제 이직 경로 정리 -->
+<!-- 대표 이미지 삽입 위치: 16:9 이미지 권장 (아래 img-block 자리에 교체) -->
+<meta name="description" content="연구직에서 기업 데이터 분석가로 옮기려는 연구자·박사를 위해 필요한 역량, 포트폴리오 준비, 전형 단계를 상담 경험을 바탕으로 정리했습니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5;
+  --text: #2c2c2c;
+  --accent: #1a5276;
+  --accent-light: #e8f4fd;
+  --muted: #727272;
+  --border: #e8e0d5;
+  --card-bg: #ffffff;
+  --green: #1e8449;
+  --green-light: #e8f5ee;
+  --orange: #d35400;
+  --orange-light: #fef3e2;
+  --purple: #6e2f8a;
+  --purple-light: #f4eefa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+.summary-card {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 24px 28px;
+  margin: 40px 0;
+}
+.summary-card .label {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  letter-spacing: 1px; margin-bottom: 10px;
+}
+.summary-card p {
+  font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px; font-weight: 700;
+  margin: 50px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+  color: var(--text);
+}
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 20px;
+  background: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px; font-weight: 600;
+  margin: 32px 0 14px;
+  color: var(--text);
+}
+
+p { margin-bottom: 20px; word-break: keep-all; }
+
+.highlight {
+  background: none;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* 대표 이미지 자리 — 실제 이미지 삽입 전까지 표시되는 플레이스홀더 */
+.img-block {
+  margin: 32px 0 10px;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  background: var(--card-bg);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 20px;
+}
+figure { margin: 0 0 30px; }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.compare-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.compare-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2;
+}
+.compare-item .ci-list li { padding: 0; }
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.item-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name {
+  font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text);
+}
+.item-card .ic-meta {
+  font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px;
+}
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point {
+  margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500;
+}
+.item-card.highlight-card {
+  border: 2px solid var(--accent);
+  background: var(--accent-light);
+}
+.item-card.highlight-card .ic-name { color: var(--accent); }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 15px;
+}
+.data-table th {
+  background: var(--accent);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.data-table tr:nth-child(even) td { background: #f8f8f8; }
+
+.point-badge {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.example-card {
+  background: var(--orange-light);
+  border: 1px solid #f0c080;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.example-card .ec-label {
+  font-size: 12px; font-weight: 600; color: var(--orange);
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+
+.checklist {
+  background: var(--green-light);
+  border: 1px solid #a8d5b8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.checklist .cl-label {
+  font-size: 12px; font-weight: 600; color: var(--green);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.cl-item {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #1a5c35;
+  line-height: 1.7;
+}
+.cl-item:last-child { margin-bottom: 0; }
+
+.how-box {
+  background: var(--purple-light);
+  border: 1px solid #d4a8e8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.how-box .hb-label {
+  font-size: 12px; font-weight: 600; color: var(--purple);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.how-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.how-item:last-child { margin-bottom: 0; }
+.how-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.how-text { font-size: 15px; color: #3a1a5a; line-height: 1.75; }
+.how-text strong { color: var(--purple); }
+
+.conclusion-box {
+  background: linear-gradient(135deg, #0d1a2d, #1a3050);
+  color: white;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 50px 0;
+}
+.conclusion-box h3 {
+  font-family: 'Noto Serif KR', serif;
+  color: #aed6f1;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.conclusion-box p {
+  color: rgba(255,255,255,0.87);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.conclusion-box p:last-child { margin-bottom: 0; }
+
+.disclaimer {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; }
+  .item-grid { grid-template-columns: 1fr; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .data-table td, .data-table th { padding: 10px; font-size: 13px; }
+  h2 { font-size: 19px; }
+  body { font-size: 16px; }
+}
+
+.back-nav {
+  max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+}
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+
+.experience-box { background: linear-gradient(135deg, #fdf6e8, #fef3e2); border: 1px solid #e8c07a; border-radius: 14px; padding: 28px 30px; margin: 34px 0; }
+.experience-box .exp-label { font-size: 12px; font-weight: 700; color: var(--orange); letter-spacing: 1px; margin-bottom: 14px; }
+.experience-box p { font-size: 15.5px; color: #4a3212; margin-bottom: 14px; }
+.experience-box p:last-child { margin-bottom: 0; }
+</style>
+
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>연구직에서 기업 데이터 분석가로 옮기려는 연구자·박사를 위해, 실제로 통하는 역량 번역법과 포트폴리오 준비, 전형 단계별 특징을 정리했습니다. 지난 20년간 다양한 전공의 연구자들을 상담해오며 반복적으로 확인한 패턴을 바탕으로 합니다.</p>
+  </div>
+
+  <p>"논문에서 통계 분석을 해봤으니 데이터 분석가로 갈 수 있지 않을까요?" 제가 논문·커리어 상담을 하면서 가장 자주 받는 질문 중 하나입니다. 결론부터 말씀드리면, 연구 경험은 분명 자산이 되지만 그대로는 통하지 않습니다. 기업이 원하는 것은 "논문을 잘 쓰는 사람"이 아니라 "정해진 시간 안에 의사결정에 쓸 수 있는 결과를 만드는 사람"이기 때문입니다.</p>
+
+  <p>이 글에서는 <span class="highlight">연구 경험을 기업이 알아보는 언어로 번역하는 방법</span>과, 실제 전형에서 자주 요구되는 준비물을 단계별로 정리합니다. 제가 상담 과정에서 반복적으로 마주친 시행착오들을 바탕으로, 처음 이 전환을 준비하는 분들이 헛수고를 줄일 수 있도록 구성했습니다.</p>
+
+  <figure>
+    <div class="img-block">여기에 대표 이미지를 삽입하세요 (16:9 권장)</div>
+    <figcaption>노트북 화면에 데이터 시각화 차트를 띄워놓고 분석 결과를 정리하는 모습. 연구실에서 익힌 통계 분석 역량이 기업의 데이터 분석 업무로 이어지는 과정을 상징적으로 보여준다.</figcaption>
+  </figure>
+
+  <div class="experience-box">
+    <div class="exp-label">제가 직접 겪고 지켜본 이야기</div>
+    <p>저는 지난 20년 가까운 시간 동안 탠패스연구소를 운영하며 수많은 연구자·박사님들의 논문과 이직 상담을 진행해왔습니다. 데이터 분석 직무로 옮기고 싶어 하시는 분들을 상담할 때마다 느끼는 것은, 실력이 부족해서가 아니라 <span class="highlight">본인의 연구 경험을 실무 언어로 번역하는 연습</span>이 안 되어 있는 경우가 대부분이라는 점입니다.</p>
+    <p>실제로 어떤 분은 "논문에서 회귀분석을 했다"는 한 줄만 이력서에 적어 서류에서 계속 떨어지셨는데, 함께 "응답자 2,000명 규모의 데이터를 R로 분석해 3개 핵심 변수의 인과관계를 검증했다"로 다시 쓴 뒤로는 서류 통과율이 눈에 띄게 달라졌습니다. 이 글의 내용은 그런 사례들을 여러 번 지켜보며 정리한 것입니다.</p>
+  </div>
+
+  <h2>연구실의 분석과 기업의 분석은 기준이 다릅니다</h2>
+
+  <div class="compare-box">
+    <div class="compare-item basic">
+      <div class="ci-label">연구실에서의 분석</div>
+      <ul class="ci-list">
+        <li>가설을 세우고 몇 달에 걸쳐 검증</li>
+        <li>통계적 유의성과 이론적 정합성이 목표</li>
+        <li>결과를 논문 형식으로 정리</li>
+        <li>재현 가능성과 방법론의 엄밀함 중시</li>
+      </ul>
+    </div>
+    <div class="compare-item extra">
+      <div class="ci-label">기업에서의 분석</div>
+      <ul class="ci-list">
+        <li>정해진 마감 안에 의사결정용 결과 도출</li>
+        <li>실행 가능한 인사이트와 숫자가 목표</li>
+        <li>결과를 슬라이드나 대시보드로 정리</li>
+        <li>속도와 커뮤니케이션 명확성 중시</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>제가 상담에서 만난 많은 분들이 이 차이를 몰라서 이력서와 면접에서 손해를 봅니다. "3년간 패널 데이터를 이용해 인과관계를 검증했습니다"라는 문장은 학계에서는 훌륭하지만, 채용 담당자에게는 무엇을 할 수 있는 사람인지 잘 전달되지 않습니다. 같은 경험도 "3년간 대규모 데이터를 정제하고 분석해 신뢰할 수 있는 결론을 도출한 경험이 있습니다"로 바꾸면 훨씬 명확하게 읽힙니다.</p>
+
+  <h2>기업이 실제로 확인하는 네 가지</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">💻</div>
+      <div class="ic-name">실무 툴 경험</div>
+      <div class="ic-meta">SQL·파이썬·시각화 도구</div>
+      <div class="ic-desc">R이나 통계 패키지 경험은 있지만 SQL과 파이썬, 태블로 같은 실무 도구 경험이 없는 경우가 많습니다. 이 격차를 먼저 메우는 것이 우선입니다.</div>
+      <div class="ic-point">이력서에 사용 도구를 구체적으로 명시</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📊</div>
+      <div class="ic-name">비즈니스 문해력</div>
+      <div class="ic-meta">매출·전환율·리텐션 등 지표 이해</div>
+      <div class="ic-desc">연구 주제와 무관하게, 매출·전환율 같은 비즈니스 지표를 다뤄본 적이 있는지를 봅니다. 사이드 프로젝트로라도 보완이 필요합니다.</div>
+      <div class="ic-point">공개 데이터로 비즈니스 지표 분석 연습</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🗣️</div>
+      <div class="ic-name">전달력</div>
+      <div class="ic-meta">비전문가 대상 설명 능력</div>
+      <div class="ic-desc">논문 발표는 같은 분야 전문가를 대상으로 하지만, 기업 보고는 다른 부서 사람에게 설명하는 능력을 요구합니다.</div>
+      <div class="ic-point">전문용어 없이 결론부터 말하는 연습</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">⏱️</div>
+      <div class="ic-name">속도 감각</div>
+      <div class="ic-meta">짧은 기한 내 결과물</div>
+      <div class="ic-desc">완벽한 분석보다 정해진 기한 안에 "쓸 수 있는" 결과를 내는 감각을 실무 프로젝트나 대회 경험으로 보여줄 수 있습니다.</div>
+      <div class="ic-point">데이터 분석 공모전 참가 경험 어필</div>
+    </div>
+  </div>
+
+  <h2>준비 과정을 기간과 비용으로 정리하면</h2>
+
+  <p>아래 표는 상담 과정에서 실제로 이 경로를 준비한 분들의 사례를 참고해 정리한 일반적인 기준입니다. 개인의 기존 역량에 따라 기간은 달라질 수 있습니다.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>준비 항목</th>
+        <th>대상</th>
+        <th>일반적 기간</th>
+        <th>핵심</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>SQL·파이썬 기초</td>
+        <td>통계 툴만 써본 연구자</td>
+        <td>2~3개월</td>
+        <td>온라인 강의로 충분 <span class="point-badge">핵심</span></td>
+      </tr>
+      <tr>
+        <td>포트폴리오 프로젝트 1~2건</td>
+        <td>전 지원자</td>
+        <td>1~2개월</td>
+        <td>공개 데이터셋 활용 가능</td>
+      </tr>
+      <tr>
+        <td>직무 경력기술서 재작성</td>
+        <td>전 지원자</td>
+        <td>1~2주</td>
+        <td>연구 경험을 성과 중심으로 번역</td>
+      </tr>
+      <tr>
+        <td>데이터 분석 공모전 참여</td>
+        <td>실무 경험 부족자</td>
+        <td>선택</td>
+        <td>실무 감각 증빙에 유리 <span class="point-badge">핵심</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>실제 상황에 적용해보면</h2>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>사회과학 박사 출신이 기업 데이터 분석가로 지원한 경우</h3>
+    <p>이 사례는 상담에서 자주 접하는 패턴을 바탕으로 구성한 가상의 상황입니다. 5년간 설문 데이터를 통계적으로 분석해 박사학위를 받은 지원자가, 경력기술서에 논문 제목과 게재 학술지를 그대로 나열해 제출했다고 가정해 보겠습니다.</p>
+    <p>이 경우 서류 통과율이 낮은 경우가 많습니다. 채용 담당자 입장에서는 학술지명보다 "어떤 규모의 데이터를, 어떤 도구로, 어떤 결론을 냈는지"가 더 궁금하기 때문입니다.</p>
+    <p>같은 경험을 "응답자 5,000명 규모의 설문 데이터를 SPSS와 R로 분석해 정책 제언까지 도출한 경험"으로 재구성하면, 동일한 연구 경험도 훨씬 설득력 있게 전달됩니다.</p>
+  </div>
+
+  <h2>지원 전 스스로 점검할 것</h2>
+
+  <div class="checklist">
+    <div class="cl-label">준비 체크리스트</div>
+    <div class="cl-item"><strong>실무 툴 경험</strong> — SQL과 파이썬 중 최소 하나는 실습 프로젝트로 증명할 수 있는가</div>
+    <div class="cl-item"><strong>경력기술서 언어</strong> — 학술 용어를 성과·숫자 중심 문장으로 바꾸었는가</div>
+    <div class="cl-item"><strong>포트폴리오</strong> — 공개된 링크(깃허브, 블로그 등)로 결과물을 보여줄 수 있는가</div>
+    <div class="cl-item"><strong>지원 직무 이해</strong> — 채용 공고의 업무 범위를 실제로 이해하고 있는가</div>
+    <div class="cl-item"><strong>면접 답변</strong> — 연구 경험을 3분 안에 비전문가에게 설명할 수 있는가</div>
+  </div>
+
+  <h2>실제로 준비하는 순서</h2>
+
+  <div class="how-box">
+    <div class="hb-label">단계별 진행 방법</div>
+    <div class="how-item">
+      <div class="how-num">1</div>
+      <div class="how-text"><strong>도구 갭 확인</strong> — 지원하려는 직무 공고 5~10개를 모아 공통적으로 요구하는 툴을 확인합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">2</div>
+      <div class="how-text"><strong>기초 학습</strong> — 부족한 도구를 온라인 강의나 부트캠프로 2~3개월 안에 익힙니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">3</div>
+      <div class="how-text"><strong>포트폴리오 제작</strong> — 관심 있는 산업의 공개 데이터로 분석 프로젝트 1~2건을 완성합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">4</div>
+      <div class="how-text"><strong>경력기술서 재작성</strong> — 연구 경험을 성과와 숫자 중심으로 다시 씁니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">5</div>
+      <div class="how-text"><strong>모의 면접</strong> — 비전문가에게 연구 내용을 설명하는 연습을 반복합니다.</div>
+    </div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 연구 경험은 자산이지만 그대로는 안 통합니다</h3>
+  <p>분석력과 논리적 사고력은 분명한 강점입니다. 다만 그 경험을 기업의 언어로 번역하는 과정 없이는 전달되지 않습니다.</p>
+
+  <h3>두 번째, 도구 격차는 생각보다 빨리 메울 수 있습니다</h3>
+  <p>SQL과 파이썬 기초는 몇 달이면 실무에 쓸 수 있는 수준까지 올라갑니다. 오히려 오래 걸리는 것은 비즈니스 맥락을 이해하는 감각입니다.</p>
+
+  <h3>세 번째, 포트폴리오가 이력서보다 더 많은 것을 말해줍니다</h3>
+  <p>제가 상담해온 사례들을 보면, 서류 통과율은 경력기술서의 문장력보다 실제로 확인 가능한 결과물이 있는지에서 갈리는 경우가 많았습니다.</p>
+
+  <div class="conclusion-box">
+    <h3>번역 없이는 경험도 전달되지 않습니다</h3>
+    <p>연구직에서 데이터 분석가로 옮기는 길은 존재합니다. 다만 그 길은 연구 경험을 그대로 옮기는 것이 아니라, 기업이 알아듣는 언어와 결과물로 다시 만드는 과정입니다.</p>
+    <p>지금 이직을 준비하고 계시다면, 오늘 정리한 체크리스트 중 가장 부족한 한 가지부터 채워보시길 권합니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글은 일반적인 이직 준비 경향과 상담 경험을 바탕으로 정리한 정보성 글입니다. 실제 채용 기준은 기업과 직무에 따라 다르므로, 지원 전 해당 기업의 공고와 채용 담당자의 안내를 반드시 확인하시기 바랍니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#연구직이직</span>
+    <span class="tag">#데이터분석가</span>
+    <span class="tag">#박사커리어전환</span>
+    <span class="tag">#경력기술서작성법</span>
+    <span class="tag">#연구원이직</span>
+    <span class="tag">#데이터분석취업</span>
+    <span class="tag">#포닥진로</span>
+    <span class="tag">#연구소밖이야기</span>
+    <span class="tag">#커리어전환</span>
+    <span class="tag">#SQL파이썬</span>
+  </div>
+
+</div>
