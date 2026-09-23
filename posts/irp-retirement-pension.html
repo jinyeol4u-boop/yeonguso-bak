@@ -1,0 +1,581 @@
+<!-- 추천 제목: 연구원 퇴직연금(IRP), 일반 직장인과 다른 점 -->
+<!-- 대표 이미지 삽입 위치: 16:9 이미지 권장 (SVG 일러스트로 대체) -->
+<meta name="description" content="연구직은 계약 형태가 자주 바뀌어 퇴직연금(IRP) 관리가 일반 직장인과 다르게 꼬이기 쉽습니다. 연구원 특유의 상황과 IRP 관리 기준을 정리했습니다.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg: #faf8f5;
+  --text: #2c2c2c;
+  --accent: #1a5276;
+  --accent-light: #e8f4fd;
+  --muted: #727272;
+  --border: #e8e0d5;
+  --card-bg: #ffffff;
+  --green: #1e8449;
+  --green-light: #e8f5ee;
+  --orange: #d35400;
+  --orange-light: #fef3e2;
+  --purple: #6e2f8a;
+  --purple-light: #f4eefa;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.container { max-width: 740px; margin: 0 auto; padding: 0 20px; }
+
+.summary-card {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 12px 12px 0;
+  padding: 24px 28px;
+  margin: 40px 0;
+}
+.summary-card .label {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  letter-spacing: 1px; margin-bottom: 10px;
+}
+.summary-card p {
+  font-size: 16px; color: #1a3a5c; line-height: 1.8; margin-bottom: 0;
+}
+
+h2 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px; font-weight: 700;
+  margin: 50px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+  color: var(--text);
+}
+h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 20px;
+  background: var(--accent);
+  margin-right: 12px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 18px; font-weight: 600;
+  margin: 32px 0 14px;
+  color: var(--text);
+}
+
+p { margin-bottom: 20px; word-break: keep-all; }
+
+.highlight {
+  background: none;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.img-illustration { margin: 32px 0 10px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.img-illustration svg { display: block; width: 100%; height: auto; }
+figure { margin: 0 0 30px; }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.compare-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+.compare-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 20px;
+}
+.compare-item.basic { border-top: 3px solid var(--muted); }
+.compare-item.extra { border-top: 3px solid var(--accent); }
+.compare-item .ci-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.compare-item.basic .ci-label { color: var(--muted); }
+.compare-item.extra .ci-label { color: var(--accent); }
+.compare-item .ci-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2;
+}
+.compare-item .ci-list li { padding: 0; }
+
+.item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.item-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.item-card .ic-icon { font-size: 28px; margin-bottom: 10px; }
+.item-card .ic-name {
+  font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--text);
+}
+.item-card .ic-meta {
+  font-size: 12px; color: var(--accent); font-weight: 500; margin-bottom: 8px;
+}
+.item-card .ic-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+.item-card .ic-point {
+  margin-top: 10px; font-size: 13px; color: var(--green); font-weight: 500;
+}
+.item-card.highlight-card {
+  border: 2px solid var(--accent);
+  background: var(--accent-light);
+}
+.item-card.highlight-card .ic-name { color: var(--accent); }
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 15px;
+}
+.data-table th {
+  background: var(--accent);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.6;
+  font-size: 14px;
+}
+.data-table tr:nth-child(even) td { background: #f8f8f8; }
+
+.point-badge {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.example-card {
+  background: var(--orange-light);
+  border: 1px solid #f0c080;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.example-card .ec-label {
+  font-size: 12px; font-weight: 600; color: var(--orange);
+  letter-spacing: 1px; margin-bottom: 12px;
+}
+.example-card h3 { margin: 0 0 10px; font-size: 17px; color: #5a2a00; }
+.example-card p { font-size: 15px; color: #5a2a00; margin-bottom: 10px; }
+.example-card p:last-child { margin-bottom: 0; }
+
+.checklist {
+  background: var(--green-light);
+  border: 1px solid #a8d5b8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.checklist .cl-label {
+  font-size: 12px; font-weight: 600; color: var(--green);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.cl-item {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #1a5c35;
+  line-height: 1.7;
+}
+.cl-item:last-child { margin-bottom: 0; }
+
+.how-box {
+  background: var(--purple-light);
+  border: 1px solid #d4a8e8;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+.how-box .hb-label {
+  font-size: 12px; font-weight: 600; color: var(--purple);
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.how-item {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.how-item:last-child { margin-bottom: 0; }
+.how-num {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.how-text { font-size: 15px; color: #3a1a5a; line-height: 1.75; }
+.how-text strong { color: var(--purple); }
+
+.conclusion-box {
+  background: linear-gradient(135deg, #0d1a2d, #1a3050);
+  color: white;
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 50px 0;
+}
+.conclusion-box h3 {
+  font-family: 'Noto Serif KR', serif;
+  color: #aed6f1;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.conclusion-box p {
+  color: rgba(255,255,255,0.87);
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.conclusion-box p:last-child { margin-bottom: 0; }
+
+.disclaimer {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.tag {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.back-nav {
+  max-width: 740px; margin: 0 auto; padding: 20px 20px 0;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+}
+.back-nav a { color: var(--muted, #727272); text-decoration: none; }
+.back-nav a:hover { color: var(--accent, #1a5276); }
+
+@media (max-width: 600px) {
+  .compare-box { grid-template-columns: 1fr; }
+  .item-grid { grid-template-columns: 1fr; }
+  .data-table { display: block; overflow-x: auto; white-space: nowrap; }
+  .data-table td, .data-table th { padding: 10px; font-size: 13px; }
+  h2 { font-size: 19px; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="back-nav"><a href="/">← 홈으로</a></div>
+<div class="container">
+
+  <div class="summary-card">
+    <div class="label">이 글 요약</div>
+    <p>연구직은 계약 형태가 자주 바뀌고 인건비 지급 방식도 제각각이라, 퇴직연금(IRP) 관리가 일반 직장인보다 꼬이기 쉽습니다. 연구원 특유의 상황과 IRP를 정리하는 기준을 정리했습니다.</p>
+  </div>
+
+  <p>제가 상담에서 이직을 앞둔 연구원분들께 자주 여쭤보는 질문이 있습니다. "IRP 계좌, 몇 개 갖고 계세요?" 의외로 "잘 모르겠다"는 답이 많습니다. 프로젝트 단위로 계약이 바뀌고, 인건비가 급여가 아니라 용역비로 지급된 이력이 섞여 있다 보니, 본인의 퇴직연금 흐름을 제대로 파악하지 못한 채 몇 년이 지나 있는 경우가 흔합니다.</p>
+
+  <p>일반 직장인은 한 회사에 오래 다니면서 퇴직연금이 한 계좌로 비교적 단순하게 쌓입니다. 반면 연구직은 <span class="highlight">계약 형태가 여러 번 바뀌고, 인건비 지급 방식도 급여·용역비가 섞여 있어</span> 관리 기준 자체가 다릅니다. 이 글에서는 연구원이 특히 신경 써야 할 지점을 정리합니다.</p>
+
+  <p>정확한 세율과 개인별 수령 조건은 계약 형태와 소득 이력에 따라 달라지므로, 아래 내용은 일반적인 흐름을 이해하는 용도로 참고하시고 실제 처리는 반드시 금융회사·국세청 안내를 통해 확인하시기 바랍니다. 특히 계약이 여러 번 바뀐 경우일수록 직접 조회해보시는 것을 권해드립니다.</p>
+
+  <figure>
+    <div class="img-illustration">
+      <svg viewBox="0 0 700 394" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bgGrad4" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--accent-light)"/>
+            <stop offset="100%" stop-color="var(--card-bg)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="394" rx="16" fill="url(#bgGrad4)"/>
+        <!-- 여러 계약 조각들이 하나의 IRP로 모이는 모습 -->
+        <g transform="translate(90,60)">
+          <rect x="0" y="0" width="90" height="60" rx="8" fill="var(--card-bg)" stroke="var(--orange)" stroke-width="2"/>
+          <text x="45" y="35" font-size="11" fill="var(--orange)" text-anchor="middle" font-family="sans-serif">계약1</text>
+        </g>
+        <g transform="translate(90,150)">
+          <rect x="0" y="0" width="90" height="60" rx="8" fill="var(--card-bg)" stroke="var(--purple)" stroke-width="2"/>
+          <text x="45" y="35" font-size="11" fill="var(--purple)" text-anchor="middle" font-family="sans-serif">계약2</text>
+        </g>
+        <g transform="translate(90,240)">
+          <rect x="0" y="0" width="90" height="60" rx="8" fill="var(--card-bg)" stroke="var(--green)" stroke-width="2"/>
+          <text x="45" y="35" font-size="11" fill="var(--green)" text-anchor="middle" font-family="sans-serif">용역비</text>
+        </g>
+        <path d="M185 90 Q280 140 340 170" fill="none" stroke="var(--border)" stroke-width="2.5"/>
+        <path d="M185 180 Q280 180 340 190" fill="none" stroke="var(--border)" stroke-width="2.5"/>
+        <path d="M185 270 Q280 220 340 210" fill="none" stroke="var(--border)" stroke-width="2.5"/>
+        <!-- 하나로 모이는 IRP 계좌 -->
+        <g transform="translate(350,110)">
+          <rect x="0" y="0" width="220" height="170" rx="14" fill="var(--card-bg)" stroke="var(--accent)" stroke-width="3"/>
+          <circle cx="110" cy="55" r="30" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="2.5"/>
+          <text x="110" y="61" font-size="15" fill="var(--accent)" text-anchor="middle" font-family="sans-serif" font-weight="700">IRP</text>
+          <rect x="30" y="100" width="160" height="8" rx="4" fill="var(--border)"/>
+          <rect x="30" y="118" width="130" height="8" rx="4" fill="var(--border)"/>
+          <rect x="30" y="136" width="100" height="16" rx="8" fill="var(--green-light)"/>
+        </g>
+      </svg>
+    </div>
+    <figcaption>여러 번 바뀐 계약(계약직·용역비 등)에서 발생한 퇴직급여가 하나의 IRP 계좌로 모이는 흐름을 도식화한 이미지.</figcaption>
+  </figure>
+
+  <h2>일반 직장인과 무엇이 다른가</h2>
+
+  <div class="compare-box">
+    <div class="compare-item basic">
+      <div class="ci-label">일반 직장인의 퇴직연금</div>
+      <ul class="ci-list">
+        <li>한 회사에서 근속하며 누적</li>
+        <li>급여 형태로 일관되게 지급</li>
+        <li>퇴직 시점에 한 번 정산</li>
+        <li>DB·DC형 중 회사 제도에 따름</li>
+      </ul>
+    </div>
+    <div class="compare-item extra">
+      <div class="ci-label">연구원의 퇴직연금</div>
+      <ul class="ci-list">
+        <li>계약 단위로 근속이 끊기고 이어짐</li>
+        <li>급여·인건비·용역비가 혼재</li>
+        <li>계약 종료마다 소액씩 정산될 수 있음</li>
+        <li>본인이 IRP로 직접 모아 관리해야 함</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>연구원이 특히 신경 써야 할 네 가지</h2>
+
+  <div class="item-grid">
+    <div class="item-card highlight-card">
+      <div class="ic-icon">📑</div>
+      <div class="ic-name">계약직 반복</div>
+      <div class="ic-meta">1년 단위 갱신형 계약</div>
+      <div class="ic-desc">계약이 매년 갱신되는 경우, 계약 종료 시점마다 퇴직급여가 발생할 수 있어 여러 번에 나뉘어 정산될 수 있습니다.</div>
+      <div class="ic-point">계약 종료 때마다 명세서 확인</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">💳</div>
+      <div class="ic-name">인건비 지급 방식</div>
+      <div class="ic-meta">급여 vs 용역비</div>
+      <div class="ic-desc">연구비에서 용역비 형태로 지급받은 경우, 4대보험·퇴직급여 적용 대상이 아닐 수 있어 별도 확인이 필요합니다.</div>
+      <div class="ic-point">계약서상 소득 구분 확인</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🏦</div>
+      <div class="ic-name">IRP 계좌 통합</div>
+      <div class="ic-meta">여러 계좌 분산 방지</div>
+      <div class="ic-desc">계약이 바뀔 때마다 새 IRP 계좌가 생기기 쉬운데, 가능하면 하나의 계좌로 통합해 관리하는 것이 추적이 쉽습니다.</div>
+      <div class="ic-point">계좌 통합 시 수수료 확인</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📉</div>
+      <div class="ic-name">경력 단절 구간</div>
+      <div class="ic-meta">계약 사이 공백기</div>
+      <div class="ic-desc">계약 사이 공백 기간이 있는 경우, 국민연금 임의가입 여부도 함께 점검해두면 나중에 유리할 수 있습니다.</div>
+      <div class="ic-point">공백기 국민연금 처리 확인</div>
+    </div>
+  </div>
+
+  <h2>상황별 정리</h2>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>상황</th>
+        <th>확인할 점</th>
+        <th>비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>계약직에서 계약직으로 이동</td>
+        <td>이전 계약의 퇴직급여가 IRP로 이체됐는지</td>
+        <td>미이체 시 별도 청구 필요 <span class="point-badge">핵심</span></td>
+      </tr>
+      <tr>
+        <td>연구비 용역비로 근무</td>
+        <td>퇴직급여 적용 대상 여부</td>
+        <td>계약서·근로계약 형태 확인</td>
+      </tr>
+      <tr>
+        <td>여러 개 IRP 계좌 보유</td>
+        <td>계좌 통합 가능 여부</td>
+        <td>금융회사 통해 이전 신청 <span class="point-badge">핵심</span></td>
+      </tr>
+      <tr>
+        <td>기업 이직으로 전환</td>
+        <td>새 회사의 퇴직연금 제도(DB/DC)</td>
+        <td>기존 IRP는 유지하며 별도 관리</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>실제 적용해보면</h2>
+
+  <div class="example-card">
+    <div class="ec-label">이해를 돕기 위한 가상의 사례</div>
+    <h3>3개의 연구 계약을 거쳐 기업으로 이직하는 경우</h3>
+    <p>이 사례는 이해를 돕기 위해 구성한 가상의 상황입니다. 3년간 서로 다른 연구 과제에서 총 3번 계약을 갱신하며 근무하다가, 이번에 기업으로 이직한다고 가정해 보겠습니다.</p>
+    <p>이 경우 계약이 바뀔 때마다 소액의 퇴직급여가 각각 다른 IRP 계좌로 흩어져 있을 가능성이 있습니다. <span class="highlight">계좌를 통합하지 않으면</span> 나중에 실제로 얼마가 쌓였는지 파악하기 어려워지고, 계좌별로 수수료가 중복 발생할 수 있습니다.</p>
+    <p>이직을 계기로 기존 IRP 계좌들을 하나로 통합 정리해두면, 이후 관리가 훨씬 수월해집니다.</p>
+  </div>
+
+  <h2>추가로 알아두면 좋은 점</h2>
+
+  <p>상담에서 IRP 이야기가 나오면 함께 자주 여쭤보시는 것들이 있습니다. 미리 알아두시면 나중에 당황할 일이 줄어듭니다.</p>
+
+  <div class="item-grid">
+    <div class="item-card">
+      <div class="ic-icon">💰</div>
+      <div class="ic-name">중도 인출</div>
+      <div class="ic-meta">원칙적으로 제한적</div>
+      <div class="ic-desc">IRP는 주택 구입, 요양 등 법에서 정한 사유가 아니면 중도 인출이 제한됩니다. 급전이 필요하다고 쉽게 뺄 수 있는 계좌가 아닙니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🧾</div>
+      <div class="ic-name">세제 혜택</div>
+      <div class="ic-meta">연금 수령 시 저율 과세</div>
+      <div class="ic-desc">일시금으로 받기보다 연금 형태로 나눠 받으면 세율이 낮아지는 구조입니다. 수령 방식을 미리 비교해보는 것이 좋습니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">🏢</div>
+      <div class="ic-name">금융회사 선택</div>
+      <div class="ic-meta">수수료·상품 비교</div>
+      <div class="ic-desc">은행, 증권사, 보험사마다 수수료와 운용 상품이 다릅니다. 계좌를 새로 개설하기 전에 몇 곳을 비교해보시길 권합니다.</div>
+    </div>
+    <div class="item-card">
+      <div class="ic-icon">📆</div>
+      <div class="ic-name">연 1회 점검</div>
+      <div class="ic-meta">잊지 않고 확인</div>
+      <div class="ic-desc">계약이 자주 바뀌지 않더라도, 연 1회 정도는 계좌통합관리서비스에서 현황을 확인하는 습관을 들이면 좋습니다.</div>
+    </div>
+  </div>
+
+  <h2>점검 체크리스트</h2>
+
+  <div class="checklist">
+    <div class="cl-label">이직 전후 확인 사항</div>
+    <div class="cl-item"><strong>보유 IRP 계좌 수 확인</strong> — 금융결제원 계좌통합관리서비스에서 일괄 조회 가능</div>
+    <div class="cl-item"><strong>계약별 퇴직급여 이체 여부</strong> — 이전 계약의 퇴직급여가 실제로 IRP에 들어왔는지</div>
+    <div class="cl-item"><strong>용역비 계약 이력 확인</strong> — 퇴직급여 대상에서 제외된 기간이 있는지</div>
+    <div class="cl-item"><strong>계좌 통합 검토</strong> — 여러 계좌를 하나로 모을지 결정</div>
+    <div class="cl-item"><strong>새 직장 퇴직연금 제도 확인</strong> — DB형인지 DC형인지 미리 파악</div>
+    <div class="cl-item"><strong>계좌 명의·연락처 최신화</strong> — 이직 후 연락처가 바뀌면 계좌 정보도 함께 갱신</div>
+  </div>
+
+  <h2>처리 순서</h2>
+
+  <div class="how-box">
+    <div class="hb-label">단계별 진행 방법</div>
+    <div class="how-item">
+      <div class="how-num">1</div>
+      <div class="how-text"><strong>계좌통합관리서비스</strong>(금융결제원)에서 본인 명의 IRP 계좌를 전부 조회합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">2</div>
+      <div class="how-text">각 계좌에 <strong>이전 계약의 퇴직급여가 정상 이체됐는지</strong> 확인합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">3</div>
+      <div class="how-text">누락된 부분이 있으면 <strong>이전 소속 기관 인사팀에 문의</strong>합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">4</div>
+      <div class="how-text">계좌가 여러 개면 <strong>하나로 통합</strong>할지 금융회사와 상담합니다.</div>
+    </div>
+    <div class="how-item">
+      <div class="how-num">5</div>
+      <div class="how-text">새 직장 입사 후 <strong>퇴직연금 제도 안내</strong>를 받아 기존 IRP와의 연계를 확인합니다.</div>
+    </div>
+  </div>
+
+  <h2>결국 기억해야 할 세 가지</h2>
+
+  <h3>첫 번째, 계약이 바뀔 때마다 흩어지기 쉽습니다</h3>
+  <p>본인이 직접 챙기지 않으면 계좌가 여러 개로 나뉜 채 방치되기 쉽습니다.</p>
+
+  <h3>두 번째, 용역비 이력은 퇴직급여 사각지대가 될 수 있습니다</h3>
+  <p>급여가 아닌 용역비로 받은 기간은 퇴직급여 대상에서 빠질 수 있으니 미리 확인이 필요합니다.</p>
+
+  <h3>세 번째, 이직 시점이 정리할 좋은 기회입니다</h3>
+  <p>새 직장으로 옮기는 시점에 기존 계좌를 한 번에 점검하고 통합하면 이후 관리가 훨씬 쉬워집니다.</p>
+
+  <div class="conclusion-box">
+    <h3>흩어진 계좌부터 모아보세요</h3>
+    <p>연구직의 퇴직연금은 저절로 정리되지 않습니다. 계약이 바뀔 때마다 본인이 직접 확인하고 모아야 하는 구조입니다.</p>
+    <p>지금 이직을 준비 중이시라면, 계좌통합관리서비스에서 본인 명의 IRP 계좌부터 한 번 조회해보시길 권합니다. 생각보다 여러 개로 흩어져 있는 경우가 많아, 직접 확인해보면 놀라시는 분들도 종종 있었습니다.</p>
+  </div>
+
+  <div class="disclaimer">
+    ※ 이 글의 퇴직연금·세금 관련 내용은 일반적인 기준을 정리한 정보성 콘텐츠이며, 개인의 계약 형태와 소득 이력에 따라 적용 기준이 달라질 수 있습니다. 정확한 내용은 금융회사, 국민연금공단, 국세청 등 공식 기관을 통해 반드시 다시 확인하시기 바랍니다.
+  </div>
+
+  <div class="tags">
+    <span class="tag">#연구원퇴직연금</span>
+    <span class="tag">#IRP계좌</span>
+    <span class="tag">#계약직퇴직금</span>
+    <span class="tag">#연구비용역비</span>
+    <span class="tag">#퇴직연금통합</span>
+    <span class="tag">#이직준비</span>
+    <span class="tag">#제도와절차</span>
+    <span class="tag">#연구직이직</span>
+  </div>
+
+</div>
+</body>
+</html>
