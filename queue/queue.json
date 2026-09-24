@@ -1,13 +1,5 @@
 [
   {
-    "content_file": "queue/02-cover-letter-examples.html",
-    "target": "posts/cover-letter-sentence-examples.html",
-    "category_file": "categories/toolkit.html",
-    "category_tag": "실무 도구함",
-    "title": "자기소개서에 연구 경험 녹이는 문장 예시 모음",
-    "desc": "연구 경험을 자기소개서 문장으로 바꿀 때 참고할 수 있는 상황별 예시와 Before/After 비교를 정리했습니다."
-  },
-  {
     "content_file": "queue/03-why-left-research.html",
     "target": "posts/interview-why-left-research.html",
     "category_file": "categories/career-transition.html",
