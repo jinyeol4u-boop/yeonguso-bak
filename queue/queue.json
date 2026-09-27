@@ -1,13 +1,5 @@
 [
   {
-    "content_file": "queue/05-paper-rejection-lessons.html",
-    "target": "posts/paper-rejection-lessons.html",
-    "category_file": "categories/lab-life.html",
-    "category_tag": "연구소 안 이야기",
-    "title": "논문 리젝을 겪고 배운 것들",
-    "desc": "논문 리젝을 마주하는 태도와 그 경험에서 배울 수 있는 것들을 정리한 에세이입니다."
-  },
-  {
     "content_file": "queue/06-postdoc-transition-timeline.html",
     "target": "posts/postdoc-transition-timeline.html",
     "category_file": "categories/career-transition.html",
