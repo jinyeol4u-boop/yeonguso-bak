@@ -1,13 +1,5 @@
 [
   {
-    "content_file": "queue/07-career-certificate-request.html",
-    "target": "posts/career-certificate-request.html",
-    "category_file": "categories/systems-procedures.html",
-    "category_tag": "제도와 절차",
-    "title": "이직 시 경력증명서 발급, 어디에 요청해야 하나",
-    "desc": "연구직은 소속이 복잡해 경력증명서 발급처를 헷갈리기 쉽습니다. 소속 형태별 발급처와 준비 방법을 정리했습니다."
-  },
-  {
     "content_file": "queue/08-researcher-to-planner-faq.html",
     "target": "posts/researcher-to-planner-faq.html",
     "category_file": "categories/career-transition.html",
