@@ -1,13 +1,5 @@
 [
   {
-    "content_file": "queue/08-researcher-to-planner-faq.html",
-    "target": "posts/researcher-to-planner-faq.html",
-    "category_file": "categories/career-transition.html",
-    "category_tag": "이직·커리어 전환",
-    "title": "연구원에서 기획자로, 직무 전환 시 자주 나오는 질문들",
-    "desc": "연구원에서 기획 직무로 전환할 때 자주 나오는 질문들과 답변을 상담 경험을 바탕으로 정리했습니다."
-  },
-  {
     "content_file": "queue/09-freelance-to-fulltime-tax.html",
     "target": "posts/freelance-to-fulltime-tax.html",
     "category_file": "categories/systems-procedures.html",
