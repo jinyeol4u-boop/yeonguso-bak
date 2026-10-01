@@ -1,13 +1,5 @@
 [
   {
-    "content_file": "queue/09-freelance-to-fulltime-tax.html",
-    "target": "posts/freelance-to-fulltime-tax.html",
-    "category_file": "categories/systems-procedures.html",
-    "category_tag": "제도와 절차",
-    "title": "프리랜서 연구 용역에서 정규직 전환 시 세금 처리",
-    "desc": "프리랜서 연구 용역 소득과 정규직 근로소득이 함께 있는 해의 세금 처리 방법을 정리했습니다."
-  },
-  {
     "content_file": "queue/10-research-labor-cost-career-proof.html",
     "target": "posts/research-labor-cost-career-proof.html",
     "category_file": "categories/systems-procedures.html",
